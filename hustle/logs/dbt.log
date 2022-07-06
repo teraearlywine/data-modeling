@@ -2658,3 +2658,117 @@ There are 1 unused configuration paths:
 22:26:53.412419 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
 22:26:53.412522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e6d35ffe-e25e-456b-9a46-eba84e366010', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cc20d0>]}
 22:26:53.412821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cc20a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c5ab20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c5a8e0>]}
+
+
+============================== 2022-07-06 22:30:03.602564 | 3ebb4741-451d-4ceb-a33f-d6293286d938 ==============================
+22:30:03.602589 [info ] [MainThread]: Running with dbt=1.1.1
+22:30:03.602932 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+22:30:03.603030 [debug] [MainThread]: Tracking: tracking
+22:30:03.610027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107509430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107509cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107509e20>]}
+22:30:03.630213 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+22:30:03.630465 [debug] [MainThread]: Partial parsing: added file: hustle://models/schema.yml
+22:30:03.636356 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:30:03.638923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3ebb4741-451d-4ceb-a33f-d6293286d938', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076580d0>]}
+22:30:03.642242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3ebb4741-451d-4ceb-a33f-d6293286d938', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075ace20>]}
+22:30:03.642475 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:30:03.642609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3ebb4741-451d-4ceb-a33f-d6293286d938', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075ace50>]}
+22:30:03.643285 [info ] [MainThread]: 
+22:30:03.643577 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:30:03.644309 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323"
+22:30:03.644466 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:30:04.445331 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323_dbt_tera"
+22:30:04.445798 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+22:30:04.719292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3ebb4741-451d-4ceb-a33f-d6293286d938', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10758e340>]}
+22:30:04.719822 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+22:30:04.720048 [info ] [MainThread]: 
+22:30:04.722708 [debug] [Thread-1  ]: Began running node model.hustle.staging__date
+22:30:04.723019 [info ] [Thread-1  ]: 1 of 2 START table model dbt_tera.staging__date ................................ [RUN]
+22:30:04.723406 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.hustle.staging__date"
+22:30:04.723533 [debug] [Thread-1  ]: Began compiling node model.hustle.staging__date
+22:30:04.723690 [debug] [Thread-1  ]: Compiling model.hustle.staging__date
+22:30:04.726316 [debug] [Thread-1  ]: Writing injected SQL for node "model.hustle.staging__date"
+22:30:04.726782 [debug] [Thread-1  ]: finished collecting timing info
+22:30:04.726895 [debug] [Thread-1  ]: Began executing node model.hustle.staging__date
+22:30:04.736719 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+22:30:05.024068 [debug] [Thread-1  ]: Writing runtime SQL for node "model.hustle.staging__date"
+22:30:05.024828 [debug] [Thread-1  ]: On model.hustle.staging__date: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "default", "target_name": "dev", "node_id": "model.hustle.staging__date"} */
+
+
+  create or replace table `portfolio-351323`.`dbt_tera`.`staging__date`
+  
+  
+  OPTIONS()
+  as (
+    
+
+WITH 
+  
+date_array_cte AS (
+
+    SELECT  GENERATE_DATE_ARRAY('1970-01-01', CURRENT_DATE, INTERVAL 1 DAY) AS created_date
+
+)
+
+, date_cte AS (
+
+    SELECT  x AS created_dt
+          , RANK() OVER (ORDER BY x ASC) AS id
+    FROM    date_array_cte, UNNEST(created_date) AS x 
+
+)
+
+
+SELECT  id
+      , created_dt
+FROM    date_cte
+  );
+  
+22:30:07.556581 [debug] [Thread-1  ]: finished collecting timing info
+22:30:07.557195 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3ebb4741-451d-4ceb-a33f-d6293286d938', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107720d60>]}
+22:30:07.557587 [info ] [Thread-1  ]: 1 of 2 OK created table model dbt_tera.staging__date ........................... [[32mCREATE TABLE (19.2k rows, 0 processed)[0m in 2.83s]
+22:30:07.558054 [debug] [Thread-1  ]: Finished running node model.hustle.staging__date
+22:30:07.558722 [debug] [Thread-3  ]: Began running node model.hustle.staging__users
+22:30:07.559091 [info ] [Thread-3  ]: 2 of 2 START table model dbt_tera.staging__users ............................... [RUN]
+22:30:07.559551 [debug] [Thread-3  ]: Acquiring new bigquery connection "model.hustle.staging__users"
+22:30:07.559713 [debug] [Thread-3  ]: Began compiling node model.hustle.staging__users
+22:30:07.559869 [debug] [Thread-3  ]: Compiling model.hustle.staging__users
+22:30:07.563059 [debug] [Thread-3  ]: Writing injected SQL for node "model.hustle.staging__users"
+22:30:07.563679 [debug] [Thread-3  ]: finished collecting timing info
+22:30:07.563852 [debug] [Thread-3  ]: Began executing node model.hustle.staging__users
+22:30:07.565411 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+22:30:07.853411 [debug] [Thread-3  ]: Writing runtime SQL for node "model.hustle.staging__users"
+22:30:07.854197 [debug] [Thread-3  ]: On model.hustle.staging__users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "default", "target_name": "dev", "node_id": "model.hustle.staging__users"} */
+
+
+  create or replace table `portfolio-351323`.`dbt_tera`.`staging__users`
+  
+  
+  OPTIONS()
+  as (
+    
+
+
+SELECT id
+     , created_dt
+
+FROM   `portfolio-351323`.`dbt_tera`.`staging__date`
+  );
+  
+22:30:11.037733 [debug] [Thread-3  ]: finished collecting timing info
+22:30:11.038377 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3ebb4741-451d-4ceb-a33f-d6293286d938', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107739af0>]}
+22:30:11.038824 [info ] [Thread-3  ]: 2 of 2 OK created table model dbt_tera.staging__users .......................... [[32mCREATE TABLE (19.2k rows, 299.7 KB processed)[0m in 3.48s]
+22:30:11.039316 [debug] [Thread-3  ]: Finished running node model.hustle.staging__users
+22:30:11.040615 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:30:11.041100 [info ] [MainThread]: 
+22:30:11.041446 [info ] [MainThread]: Finished running 2 table models in 7.40s.
+22:30:11.041733 [debug] [MainThread]: Connection 'master' was properly closed.
+22:30:11.041857 [debug] [MainThread]: Connection 'model.hustle.staging__date' was properly closed.
+22:30:11.041976 [debug] [MainThread]: Connection 'model.hustle.staging__users' was properly closed.
+22:30:11.049374 [info ] [MainThread]: 
+22:30:11.049695 [info ] [MainThread]: [32mCompleted successfully[0m
+22:30:11.049977 [info ] [MainThread]: 
+22:30:11.050203 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+22:30:11.050534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10776f520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107750c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107750ee0>]}
