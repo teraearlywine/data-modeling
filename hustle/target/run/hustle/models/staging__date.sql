@@ -1,7 +1,7 @@
 
 
   create or replace table `portfolio-351323`.`dbt_tera`.`staging__date`
-  
+  partition by date_trunc(created_dt, month)
   
   OPTIONS()
   as (
@@ -26,6 +26,9 @@ date_array_cte AS (
 
 SELECT  id
       , created_dt
+
 FROM    date_cte
+
+  
   );
   
