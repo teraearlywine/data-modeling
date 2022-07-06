@@ -1589,3 +1589,1072 @@ FROM    date_array_cte
 21:58:02.507883 [info ] [MainThread]: 
 21:58:02.508104 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
 21:58:02.508422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088133a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108813280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086fa130>]}
+
+
+============================== 2022-07-06 21:59:37.104300 | 7217c502-1df1-4241-9e6e-e36df55afa59 ==============================
+21:59:37.104320 [info ] [MainThread]: Running with dbt=1.1.1
+21:59:37.104693 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+21:59:37.104779 [debug] [MainThread]: Tracking: tracking
+21:59:37.112449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106967df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106967ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106967d30>]}
+21:59:37.127836 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+21:59:37.128041 [debug] [MainThread]: Partial parsing: added file: hustle://models/staging__users.sql
+21:59:37.134342 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+21:59:37.141867 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+21:59:37.144198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7217c502-1df1-4241-9e6e-e36df55afa59', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ad00d0>]}
+21:59:37.146456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7217c502-1df1-4241-9e6e-e36df55afa59', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a64a00>]}
+21:59:37.146581 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:59:37.146693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7217c502-1df1-4241-9e6e-e36df55afa59', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a64ee0>]}
+21:59:37.147021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a649d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a64eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a648e0>]}
+
+
+============================== 2022-07-06 21:59:50.690999 | eef3b479-7836-4324-ab00-3eface8d848a ==============================
+21:59:50.691035 [info ] [MainThread]: Running with dbt=1.1.1
+21:59:50.691366 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+21:59:50.691455 [debug] [MainThread]: Tracking: tracking
+21:59:50.699635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047970d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104797220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047b2850>]}
+21:59:50.714821 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+21:59:50.715082 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+21:59:50.720956 [debug] [MainThread]: 1603: static parser failed on staging__users.sql
+21:59:50.726776 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging__users.sql
+21:59:50.728389 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+21:59:50.730715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'eef3b479-7836-4324-ab00-3eface8d848a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049110d0>]}
+21:59:50.733078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'eef3b479-7836-4324-ab00-3eface8d848a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10489af10>]}
+21:59:50.733204 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:59:50.733313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eef3b479-7836-4324-ab00-3eface8d848a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10489afd0>]}
+21:59:50.733598 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10489a100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10489ae80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10489a850>]}
+
+
+============================== 2022-07-06 21:59:57.573789 | 52f8c5e3-e329-4c75-9754-f40094601e40 ==============================
+21:59:57.573814 [info ] [MainThread]: Running with dbt=1.1.1
+21:59:57.574166 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+21:59:57.574262 [debug] [MainThread]: Tracking: tracking
+21:59:57.581667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10577e070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105767f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105767eb0>]}
+21:59:57.596273 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+21:59:57.596492 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+21:59:57.602341 [debug] [MainThread]: 1603: static parser failed on staging__users.sql
+21:59:57.608120 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging__users.sql
+21:59:57.609729 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+21:59:57.611917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '52f8c5e3-e329-4c75-9754-f40094601e40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064510d0>]}
+21:59:57.614284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '52f8c5e3-e329-4c75-9754-f40094601e40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105865ac0>]}
+21:59:57.614433 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:59:57.614546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '52f8c5e3-e329-4c75-9754-f40094601e40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105865b80>]}
+21:59:57.614872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058653a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105865f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058658e0>]}
+
+
+============================== 2022-07-06 22:00:06.238586 | 28e85602-b884-4e02-a51b-2254eb553e66 ==============================
+22:00:06.238607 [info ] [MainThread]: Running with dbt=1.1.1
+22:00:06.238959 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:00:06.239040 [debug] [MainThread]: Tracking: tracking
+22:00:06.246216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108627b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108627400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108627c40>]}
+22:00:06.260520 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:00:06.260748 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:00:06.266830 [debug] [MainThread]: 1603: static parser failed on staging__users.sql
+22:00:06.269122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10929e250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092ce6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092ce760>]}
+
+
+============================== 2022-07-06 22:01:02.101185 | 2a9695fd-d224-443c-a409-0d4409341b30 ==============================
+22:01:02.101203 [info ] [MainThread]: Running with dbt=1.1.1
+22:01:02.101577 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:01:02.101666 [debug] [MainThread]: Tracking: tracking
+22:01:02.108405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10553d9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10553da60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10553d8b0>]}
+22:01:02.123070 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:01:02.123298 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:01:02.129421 [debug] [MainThread]: 1603: static parser failed on staging__users.sql
+22:01:02.135555 [debug] [MainThread]: 1602: parser fallback to jinja rendering on staging__users.sql
+22:01:02.137152 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:01:02.139360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2a9695fd-d224-443c-a409-0d4409341b30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056be0d0>]}
+22:01:02.141586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2a9695fd-d224-443c-a409-0d4409341b30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055d9df0>]}
+22:01:02.141709 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:01:02.141812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2a9695fd-d224-443c-a409-0d4409341b30', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055d9e80>]}
+22:01:02.142084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055d9e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055d9d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055d9910>]}
+
+
+============================== 2022-07-06 22:01:09.191707 | e7628fad-f40e-49fa-b1d0-100ed7baf35d ==============================
+22:01:09.191722 [info ] [MainThread]: Running with dbt=1.1.1
+22:01:09.192128 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['staging__users'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+22:01:09.192225 [debug] [MainThread]: Tracking: tracking
+22:01:09.200451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105db8610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105db8490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105db8460>]}
+22:01:09.216383 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:01:09.216509 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:01:09.216688 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:01:09.219338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e7628fad-f40e-49fa-b1d0-100ed7baf35d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ed60d0>]}
+22:01:09.221733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e7628fad-f40e-49fa-b1d0-100ed7baf35d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e59c10>]}
+22:01:09.221866 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:01:09.221980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e7628fad-f40e-49fa-b1d0-100ed7baf35d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e59ca0>]}
+22:01:09.222577 [info ] [MainThread]: 
+22:01:09.222800 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:01:09.223169 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323"
+22:01:09.223287 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:01:09.976536 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323_dbt_tera"
+22:01:09.976942 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+22:01:10.275380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e7628fad-f40e-49fa-b1d0-100ed7baf35d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105da6f70>]}
+22:01:10.277402 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+22:01:10.278393 [info ] [MainThread]: 
+22:01:10.288010 [debug] [Thread-1  ]: Began running node model.hustle.staging__users
+22:01:10.288565 [info ] [Thread-1  ]: 1 of 1 START view model dbt_tera.staging__users ................................ [RUN]
+22:01:10.289326 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.hustle.staging__users"
+22:01:10.289552 [debug] [Thread-1  ]: Began compiling node model.hustle.staging__users
+22:01:10.289791 [debug] [Thread-1  ]: Compiling model.hustle.staging__users
+22:01:10.297067 [debug] [Thread-1  ]: finished collecting timing info
+22:01:10.297483 [debug] [Thread-1  ]: Compilation Error in model staging__users (models/staging__users.sql)
+  'congig' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+22:01:10.297791 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e7628fad-f40e-49fa-b1d0-100ed7baf35d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fb0b80>]}
+22:01:10.298145 [error] [Thread-1  ]: 1 of 1 ERROR creating view model dbt_tera.staging__users ....................... [[31mERROR[0m in 0.01s]
+22:01:10.298598 [debug] [Thread-1  ]: Finished running node model.hustle.staging__users
+22:01:10.299857 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:01:10.300204 [info ] [MainThread]: 
+22:01:10.300467 [info ] [MainThread]: Finished running 1 view model in 1.08s.
+22:01:10.300697 [debug] [MainThread]: Connection 'master' was properly closed.
+22:01:10.300819 [debug] [MainThread]: Connection 'model.hustle.staging__users' was properly closed.
+22:01:10.305877 [info ] [MainThread]: 
+22:01:10.306114 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+22:01:10.306324 [info ] [MainThread]: 
+22:01:10.306505 [error] [MainThread]: [33mCompilation Error in model staging__users (models/staging__users.sql)[0m
+22:01:10.306679 [error] [MainThread]:   'congig' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+22:01:10.306853 [info ] [MainThread]: 
+22:01:10.307029 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+22:01:10.307286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105da6250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105da68e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105db8c70>]}
+
+
+============================== 2022-07-06 22:01:18.901040 | bd50f0c8-3976-4442-a10b-0d783584ef3d ==============================
+22:01:18.901073 [info ] [MainThread]: Running with dbt=1.1.1
+22:01:18.901450 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:01:18.901543 [debug] [MainThread]: Tracking: tracking
+22:01:18.907862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104aca130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ab3c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ab3dc0>]}
+22:01:18.923288 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:01:18.923547 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:01:18.929816 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+22:01:18.936755 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:01:18.939118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bd50f0c8-3976-4442-a10b-0d783584ef3d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c1e0d0>]}
+22:01:18.941554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bd50f0c8-3976-4442-a10b-0d783584ef3d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bb1340>]}
+22:01:18.941708 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:01:18.941814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bd50f0c8-3976-4442-a10b-0d783584ef3d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a85850>]}
+22:01:18.942126 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a85790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bb1940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bb1ca0>]}
+
+
+============================== 2022-07-06 22:01:19.522016 | b8a3f72e-b375-481a-85a5-a6f3a056d2bc ==============================
+22:01:19.522030 [info ] [MainThread]: Running with dbt=1.1.1
+22:01:19.522515 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['staging__users'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+22:01:19.522604 [debug] [MainThread]: Tracking: tracking
+22:01:19.531162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055fca90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042af2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042af4f0>]}
+22:01:19.549595 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:01:19.549750 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:01:19.549982 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:01:19.552989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b8a3f72e-b375-481a-85a5-a6f3a056d2bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105736fa0>]}
+22:01:19.555929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b8a3f72e-b375-481a-85a5-a6f3a056d2bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10568c1c0>]}
+22:01:19.556151 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:01:19.556287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b8a3f72e-b375-481a-85a5-a6f3a056d2bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056ffcd0>]}
+22:01:19.556956 [info ] [MainThread]: 
+22:01:19.557216 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:01:19.557772 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323"
+22:01:19.558068 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:01:20.309408 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323_dbt_tera"
+22:01:20.309915 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+22:01:20.602748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b8a3f72e-b375-481a-85a5-a6f3a056d2bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056af3a0>]}
+22:01:20.604539 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+22:01:20.605350 [info ] [MainThread]: 
+22:01:20.614098 [debug] [Thread-1  ]: Began running node model.hustle.staging__users
+22:01:20.614577 [info ] [Thread-1  ]: 1 of 1 START view model dbt_tera.staging__users ................................ [RUN]
+22:01:20.615213 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.hustle.staging__users"
+22:01:20.615432 [debug] [Thread-1  ]: Began compiling node model.hustle.staging__users
+22:01:20.615695 [debug] [Thread-1  ]: Compiling model.hustle.staging__users
+22:01:20.620910 [debug] [Thread-1  ]: Writing injected SQL for node "model.hustle.staging__users"
+22:01:20.621589 [debug] [Thread-1  ]: finished collecting timing info
+22:01:20.621779 [debug] [Thread-1  ]: Began executing node model.hustle.staging__users
+22:01:20.650815 [debug] [Thread-1  ]: Writing runtime SQL for node "model.hustle.staging__users"
+22:01:20.651410 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+22:01:20.651599 [debug] [Thread-1  ]: On model.hustle.staging__users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "default", "target_name": "dev", "node_id": "model.hustle.staging__users"} */
+
+
+  create or replace view `portfolio-351323`.`dbt_tera`.`staging__users`
+  OPTIONS()
+  as 
+
+
+SELET  * 
+FROM   `portfolio-351323`.`dbt_tera`.`staging__date`;
+
+
+22:01:20.954998 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected "(" or keyword SELECT or keyword WITH but got identifier "SELET" at [9:1]')
+22:01:21.292349 [debug] [Thread-1  ]: finished collecting timing info
+22:01:21.294239 [debug] [Thread-1  ]: Database Error in model staging__users (models/staging__users.sql)
+  Syntax error: Expected "(" or keyword SELECT or keyword WITH but got identifier "SELET" at [9:1]
+  compiled SQL at target/run/hustle/models/staging__users.sql
+22:01:21.295146 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b8a3f72e-b375-481a-85a5-a6f3a056d2bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10583e280>]}
+22:01:21.296246 [error] [Thread-1  ]: 1 of 1 ERROR creating view model dbt_tera.staging__users ....................... [[31mERROR[0m in 0.68s]
+22:01:21.297399 [debug] [Thread-1  ]: Finished running node model.hustle.staging__users
+22:01:21.299501 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:01:21.300321 [info ] [MainThread]: 
+22:01:21.300773 [info ] [MainThread]: Finished running 1 view model in 1.74s.
+22:01:21.301139 [debug] [MainThread]: Connection 'master' was properly closed.
+22:01:21.301296 [debug] [MainThread]: Connection 'model.hustle.staging__users' was properly closed.
+22:01:21.308078 [info ] [MainThread]: 
+22:01:21.308501 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+22:01:21.308846 [info ] [MainThread]: 
+22:01:21.309112 [error] [MainThread]: [33mDatabase Error in model staging__users (models/staging__users.sql)[0m
+22:01:21.309404 [error] [MainThread]:   Syntax error: Expected "(" or keyword SELECT or keyword WITH but got identifier "SELET" at [9:1]
+22:01:21.309649 [error] [MainThread]:   compiled SQL at target/run/hustle/models/staging__users.sql
+22:01:21.309900 [info ] [MainThread]: 
+22:01:21.310159 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+22:01:21.310571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10568c070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042affd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056af2e0>]}
+
+
+============================== 2022-07-06 22:01:55.282119 | 75a827bc-cc48-4037-9f0b-c4b4b5d71e65 ==============================
+22:01:55.282153 [info ] [MainThread]: Running with dbt=1.1.1
+22:01:55.282499 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:01:55.282592 [debug] [MainThread]: Tracking: tracking
+22:01:55.289058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d93d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d93dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d93b50>]}
+22:01:55.303703 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:01:55.303947 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:01:55.309934 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+22:01:55.316559 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:01:55.318815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '75a827bc-cc48-4037-9f0b-c4b4b5d71e65', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f000d0>]}
+22:01:55.321115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '75a827bc-cc48-4037-9f0b-c4b4b5d71e65', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e91d30>]}
+22:01:55.321242 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:01:55.321346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '75a827bc-cc48-4037-9f0b-c4b4b5d71e65', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e91d00>]}
+22:01:55.321655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e91520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e91b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e91d90>]}
+
+
+============================== 2022-07-06 22:01:57.114430 | c55f6701-41b5-4d8b-9a63-8bba6d57cb0f ==============================
+22:01:57.114455 [info ] [MainThread]: Running with dbt=1.1.1
+22:01:57.114820 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['staging__users'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+22:01:57.114906 [debug] [MainThread]: Tracking: tracking
+22:01:57.123704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bf7ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bf7a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bf7c10>]}
+22:01:57.140433 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:01:57.140552 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:01:57.140727 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:01:57.143395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c55f6701-41b5-4d8b-9a63-8bba6d57cb0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e320d0>]}
+22:01:57.145739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c55f6701-41b5-4d8b-9a63-8bba6d57cb0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ca39d0>]}
+22:01:57.145884 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:01:57.146005 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c55f6701-41b5-4d8b-9a63-8bba6d57cb0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ca3a60>]}
+22:01:57.146613 [info ] [MainThread]: 
+22:01:57.146845 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:01:57.147219 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323"
+22:01:57.147455 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:01:57.909582 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323_dbt_tera"
+22:01:57.910094 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+22:01:58.183055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c55f6701-41b5-4d8b-9a63-8bba6d57cb0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bf81c0>]}
+22:01:58.184526 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+22:01:58.185277 [info ] [MainThread]: 
+22:01:58.193406 [debug] [Thread-1  ]: Began running node model.hustle.staging__users
+22:01:58.193906 [info ] [Thread-1  ]: 1 of 1 START view model dbt_tera.staging__users ................................ [RUN]
+22:01:58.194544 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.hustle.staging__users"
+22:01:58.194753 [debug] [Thread-1  ]: Began compiling node model.hustle.staging__users
+22:01:58.195024 [debug] [Thread-1  ]: Compiling model.hustle.staging__users
+22:01:58.200053 [debug] [Thread-1  ]: Writing injected SQL for node "model.hustle.staging__users"
+22:01:58.200700 [debug] [Thread-1  ]: finished collecting timing info
+22:01:58.200885 [debug] [Thread-1  ]: Began executing node model.hustle.staging__users
+22:01:58.229102 [debug] [Thread-1  ]: Writing runtime SQL for node "model.hustle.staging__users"
+22:01:58.229611 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+22:01:58.229784 [debug] [Thread-1  ]: On model.hustle.staging__users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "default", "target_name": "dev", "node_id": "model.hustle.staging__users"} */
+
+
+  create or replace view `portfolio-351323`.`dbt_tera`.`staging__users`
+  OPTIONS()
+  as 
+
+
+SELECT  * 
+FROM   `portfolio-351323`.`dbt_tera`.`staging__date`;
+
+
+22:01:59.174975 [debug] [Thread-1  ]: finished collecting timing info
+22:01:59.175622 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c55f6701-41b5-4d8b-9a63-8bba6d57cb0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10780edc0>]}
+22:01:59.175988 [info ] [Thread-1  ]: 1 of 1 OK created view model dbt_tera.staging__users ........................... [[32mOK[0m in 0.98s]
+22:01:59.176425 [debug] [Thread-1  ]: Finished running node model.hustle.staging__users
+22:01:59.177508 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:01:59.177850 [info ] [MainThread]: 
+22:01:59.178093 [info ] [MainThread]: Finished running 1 view model in 2.03s.
+22:01:59.178309 [debug] [MainThread]: Connection 'master' was properly closed.
+22:01:59.178419 [debug] [MainThread]: Connection 'model.hustle.staging__users' was properly closed.
+22:01:59.184174 [info ] [MainThread]: 
+22:01:59.184425 [info ] [MainThread]: [32mCompleted successfully[0m
+22:01:59.184626 [info ] [MainThread]: 
+22:01:59.184790 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+22:01:59.185051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e02af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e02b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bf8220>]}
+
+
+============================== 2022-07-06 22:02:09.115102 | 7cc650ec-c98a-4bbf-9e80-07cf1b9fc5e6 ==============================
+22:02:09.115130 [info ] [MainThread]: Running with dbt=1.1.1
+22:02:09.115451 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:02:09.115545 [debug] [MainThread]: Tracking: tracking
+22:02:09.122122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054cde80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054cd970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054cda00>]}
+22:02:09.136651 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:02:09.136873 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:02:09.142778 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+22:02:09.149568 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:02:09.151858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7cc650ec-c98a-4bbf-9e80-07cf1b9fc5e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105637f40>]}
+22:02:09.154172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7cc650ec-c98a-4bbf-9e80-07cf1b9fc5e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105574c70>]}
+22:02:09.154305 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:02:09.154411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7cc650ec-c98a-4bbf-9e80-07cf1b9fc5e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054a22b0>]}
+22:02:09.154715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054a22b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105574a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105574820>]}
+
+
+============================== 2022-07-06 22:02:15.237427 | bbb5015d-7206-49e8-877f-e02c08d0603c ==============================
+22:02:15.237444 [info ] [MainThread]: Running with dbt=1.1.1
+22:02:15.237763 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:02:15.237845 [debug] [MainThread]: Tracking: tracking
+22:02:15.244215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107475e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107475970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107475a00>]}
+22:02:15.258832 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:02:15.259055 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:02:15.264921 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+22:02:15.271422 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:02:15.273649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bbb5015d-7206-49e8-877f-e02c08d0603c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075e60d0>]}
+22:02:15.275903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bbb5015d-7206-49e8-877f-e02c08d0603c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10751cf10>]}
+22:02:15.276026 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:02:15.276125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bbb5015d-7206-49e8-877f-e02c08d0603c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10751cd90>]}
+22:02:15.276412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10751cf70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10751cdf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10751ca60>]}
+
+
+============================== 2022-07-06 22:02:28.374697 | 30df33c0-db9b-44b5-985d-da0c88a70ddd ==============================
+22:02:28.374718 [info ] [MainThread]: Running with dbt=1.1.1
+22:02:28.375078 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:02:28.375176 [debug] [MainThread]: Tracking: tracking
+22:02:28.381998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105631e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105631970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105631a00>]}
+22:02:28.396341 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:02:28.396577 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:02:28.402461 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+22:02:28.408975 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:02:28.411216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '30df33c0-db9b-44b5-985d-da0c88a70ddd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10579af70>]}
+22:02:28.413476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '30df33c0-db9b-44b5-985d-da0c88a70ddd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056d9d90>]}
+22:02:28.413601 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:02:28.413705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '30df33c0-db9b-44b5-985d-da0c88a70ddd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056d9e20>]}
+22:02:28.413997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056d9df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056d9d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056d98b0>]}
+
+
+============================== 2022-07-06 22:02:49.544326 | 0b48029b-6e46-4a3d-8b5b-ebd62b2db57f ==============================
+22:02:49.544350 [info ] [MainThread]: Running with dbt=1.1.1
+22:02:49.544695 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:02:49.544797 [debug] [MainThread]: Tracking: tracking
+22:02:49.551523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105bbea00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ba52e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ba5250>]}
+22:02:49.567062 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:02:49.567304 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:02:49.573570 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+22:02:49.580789 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:02:49.583175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0b48029b-6e46-4a3d-8b5b-ebd62b2db57f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1068810d0>]}
+22:02:49.585579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0b48029b-6e46-4a3d-8b5b-ebd62b2db57f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cbabe0>]}
+22:02:49.585725 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:02:49.585833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b48029b-6e46-4a3d-8b5b-ebd62b2db57f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cbabb0>]}
+22:02:49.586151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cba3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cbaa30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cba970>]}
+
+
+============================== 2022-07-06 22:02:49.741327 | 16401c45-7dd4-403b-9087-6734e5f6a7a1 ==============================
+22:02:49.741358 [info ] [MainThread]: Running with dbt=1.1.1
+22:02:49.741703 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['staging__users'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+22:02:49.741794 [debug] [MainThread]: Tracking: tracking
+22:02:49.749063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d16bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d16c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d16040>]}
+22:02:49.767482 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:02:49.767654 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:02:49.767876 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:02:49.770932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '16401c45-7dd4-403b-9087-6734e5f6a7a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e460d0>]}
+22:02:49.773717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '16401c45-7dd4-403b-9087-6734e5f6a7a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107dc9d90>]}
+22:02:49.773915 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:02:49.774048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '16401c45-7dd4-403b-9087-6734e5f6a7a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107dc9e20>]}
+22:02:49.774703 [info ] [MainThread]: 
+22:02:49.774955 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:02:49.775432 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323"
+22:02:49.775697 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:02:50.531892 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323_dbt_tera"
+22:02:50.532505 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+22:02:50.848761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '16401c45-7dd4-403b-9087-6734e5f6a7a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e46640>]}
+22:02:50.850913 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+22:02:50.851728 [info ] [MainThread]: 
+22:02:50.861590 [debug] [Thread-1  ]: Began running node model.hustle.staging__users
+22:02:50.862031 [info ] [Thread-1  ]: 1 of 1 START view model dbt_tera.staging__users ................................ [RUN]
+22:02:50.862664 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.hustle.staging__users"
+22:02:50.862868 [debug] [Thread-1  ]: Began compiling node model.hustle.staging__users
+22:02:50.863105 [debug] [Thread-1  ]: Compiling model.hustle.staging__users
+22:02:50.868477 [debug] [Thread-1  ]: Writing injected SQL for node "model.hustle.staging__users"
+22:02:50.869130 [debug] [Thread-1  ]: finished collecting timing info
+22:02:50.869312 [debug] [Thread-1  ]: Began executing node model.hustle.staging__users
+22:02:50.899163 [debug] [Thread-1  ]: Writing runtime SQL for node "model.hustle.staging__users"
+22:02:50.899734 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+22:02:50.899920 [debug] [Thread-1  ]: On model.hustle.staging__users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "default", "target_name": "dev", "node_id": "model.hustle.staging__users"} */
+
+
+  create or replace view `portfolio-351323`.`dbt_tera`.`staging__users`
+  OPTIONS()
+  as 
+
+
+SELECT  ROW_NUMBER() OVER (PARTITION BY created_dt) AS id
+      , created_dt
+
+FROM   `portfolio-351323`.`dbt_tera`.`staging__date`;
+
+
+22:02:51.818687 [debug] [Thread-1  ]: finished collecting timing info
+22:02:51.819429 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '16401c45-7dd4-403b-9087-6734e5f6a7a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f38640>]}
+22:02:51.819886 [info ] [Thread-1  ]: 1 of 1 OK created view model dbt_tera.staging__users ........................... [[32mOK[0m in 0.96s]
+22:02:51.820427 [debug] [Thread-1  ]: Finished running node model.hustle.staging__users
+22:02:51.821732 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:02:51.822193 [info ] [MainThread]: 
+22:02:51.822521 [info ] [MainThread]: Finished running 1 view model in 2.05s.
+22:02:51.822794 [debug] [MainThread]: Connection 'master' was properly closed.
+22:02:51.822944 [debug] [MainThread]: Connection 'model.hustle.staging__users' was properly closed.
+22:02:51.828950 [info ] [MainThread]: 
+22:02:51.829221 [info ] [MainThread]: [32mCompleted successfully[0m
+22:02:51.829479 [info ] [MainThread]: 
+22:02:51.830824 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+22:02:51.831138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d6f880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d6f130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e15e80>]}
+
+
+============================== 2022-07-06 22:03:49.985120 | 1667821d-bc01-4d2c-962c-1c11b081e5ca ==============================
+22:03:49.985152 [info ] [MainThread]: Running with dbt=1.1.1
+22:03:49.985483 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:03:49.985587 [debug] [MainThread]: Tracking: tracking
+22:03:49.992627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066246d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106624760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066245b0>]}
+22:03:50.007607 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+22:03:50.007816 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:03:50.007967 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__date.sql
+22:03:50.014106 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+22:03:50.020318 [debug] [MainThread]: 1699: static parser successfully parsed staging__date.sql
+22:03:50.022952 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:03:50.025546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1667821d-bc01-4d2c-962c-1c11b081e5ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073080d0>]}
+22:03:50.028214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1667821d-bc01-4d2c-962c-1c11b081e5ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066dfeb0>]}
+22:03:50.028396 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:03:50.028509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1667821d-bc01-4d2c-962c-1c11b081e5ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106116fd0>]}
+22:03:50.028843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106116fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066dfa30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066df7f0>]}
+
+
+============================== 2022-07-06 22:03:52.791963 | 58615bca-c129-4adf-a6db-7de44cc658bb ==============================
+22:03:52.791994 [info ] [MainThread]: Running with dbt=1.1.1
+22:03:52.792350 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:03:52.792455 [debug] [MainThread]: Tracking: tracking
+22:03:52.799890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090f1ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090f1b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090f18e0>]}
+22:03:52.815077 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:03:52.815238 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:03:52.815454 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:03:52.818872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '58615bca-c129-4adf-a6db-7de44cc658bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092370d0>]}
+22:03:52.821324 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '58615bca-c129-4adf-a6db-7de44cc658bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091abee0>]}
+22:03:52.821461 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:03:52.821574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '58615bca-c129-4adf-a6db-7de44cc658bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091abf40>]}
+22:03:52.821877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091abf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091abe80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091ab9d0>]}
+
+
+============================== 2022-07-06 22:04:03.862829 | fab3f0b3-b5e4-4a52-888c-8e909285e9fd ==============================
+22:04:03.862853 [info ] [MainThread]: Running with dbt=1.1.1
+22:04:03.863200 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:04:03.863306 [debug] [MainThread]: Tracking: tracking
+22:04:03.870054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105571ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105571b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055718e0>]}
+22:04:03.885256 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:04:03.885488 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:04:03.891836 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+22:04:03.898851 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:04:03.901210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fab3f0b3-b5e4-4a52-888c-8e909285e9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056df0d0>]}
+22:04:03.903617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fab3f0b3-b5e4-4a52-888c-8e909285e9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10561df10>]}
+22:04:03.903756 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:04:03.903865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fab3f0b3-b5e4-4a52-888c-8e909285e9fd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10561df40>]}
+22:04:03.904174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10561dc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10561dd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10561d9d0>]}
+
+
+============================== 2022-07-06 22:04:04.036659 | c943708e-08ae-4488-b5b3-793c727ca605 ==============================
+22:04:04.036695 [info ] [MainThread]: Running with dbt=1.1.1
+22:04:04.037075 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['staging__users'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+22:04:04.037173 [debug] [MainThread]: Tracking: tracking
+22:04:04.044737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d40220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d40c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d40490>]}
+22:04:04.061833 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:04:04.061951 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:04:04.062116 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:04:04.064897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c943708e-08ae-4488-b5b3-793c727ca605', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e5e0d0>]}
+22:04:04.067809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c943708e-08ae-4488-b5b3-793c727ca605', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109de0c10>]}
+22:04:04.067990 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:04:04.068116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c943708e-08ae-4488-b5b3-793c727ca605', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109de0ca0>]}
+22:04:04.068724 [info ] [MainThread]: 
+22:04:04.068956 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:04:04.069281 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323"
+22:04:04.069398 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:04:05.287171 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323_dbt_tera"
+22:04:05.288240 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+22:04:05.611184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c943708e-08ae-4488-b5b3-793c727ca605', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d2e4c0>]}
+22:04:05.612768 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+22:04:05.613592 [info ] [MainThread]: 
+22:04:05.623501 [debug] [Thread-1  ]: Began running node model.hustle.staging__users
+22:04:05.623970 [info ] [Thread-1  ]: 1 of 1 START table model dbt_tera.staging__users ............................... [RUN]
+22:04:05.624607 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.hustle.staging__users"
+22:04:05.624821 [debug] [Thread-1  ]: Began compiling node model.hustle.staging__users
+22:04:05.625079 [debug] [Thread-1  ]: Compiling model.hustle.staging__users
+22:04:05.630535 [debug] [Thread-1  ]: Writing injected SQL for node "model.hustle.staging__users"
+22:04:05.631315 [debug] [Thread-1  ]: finished collecting timing info
+22:04:05.631545 [debug] [Thread-1  ]: Began executing node model.hustle.staging__users
+22:04:05.647074 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+22:04:06.347916 [debug] [Thread-1  ]: Writing runtime SQL for node "model.hustle.staging__users"
+22:04:06.348780 [debug] [Thread-1  ]: On model.hustle.staging__users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "default", "target_name": "dev", "node_id": "model.hustle.staging__users"} */
+
+
+  create or replace table `portfolio-351323`.`dbt_tera`.`staging__users`
+  
+  
+  OPTIONS()
+  as (
+    
+
+
+SELECT  RANK() OVER (PARTITION BY created_dt) AS id
+      , created_dt
+
+FROM   `portfolio-351323`.`dbt_tera`.`staging__date`
+  );
+  
+22:04:07.135850 [debug] [Thread-1  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Window ORDER BY is required for analytic function rank at [12:21]')
+22:04:08.916667 [debug] [Thread-1  ]: finished collecting timing info
+22:04:08.918583 [debug] [Thread-1  ]: Database Error in model staging__users (models/staging__users.sql)
+  Window ORDER BY is required for analytic function rank at [12:21]
+  compiled SQL at target/run/hustle/models/staging__users.sql
+22:04:08.919589 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c943708e-08ae-4488-b5b3-793c727ca605', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f70fa0>]}
+22:04:08.920506 [error] [Thread-1  ]: 1 of 1 ERROR creating table model dbt_tera.staging__users ...................... [[31mERROR[0m in 3.29s]
+22:04:08.921438 [debug] [Thread-1  ]: Finished running node model.hustle.staging__users
+22:04:08.923530 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:04:08.924146 [info ] [MainThread]: 
+22:04:08.924526 [info ] [MainThread]: Finished running 1 table model in 4.86s.
+22:04:08.924816 [debug] [MainThread]: Connection 'master' was properly closed.
+22:04:08.925015 [debug] [MainThread]: Connection 'model.hustle.staging__users' was properly closed.
+22:04:08.932631 [info ] [MainThread]: 
+22:04:08.933095 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+22:04:08.933417 [info ] [MainThread]: 
+22:04:08.933691 [error] [MainThread]: [33mDatabase Error in model staging__users (models/staging__users.sql)[0m
+22:04:08.933953 [error] [MainThread]:   Window ORDER BY is required for analytic function rank at [12:21]
+22:04:08.934194 [error] [MainThread]:   compiled SQL at target/run/hustle/models/staging__users.sql
+22:04:08.934444 [info ] [MainThread]: 
+22:04:08.934690 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+22:04:08.935063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d2ea30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d2ec70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f23250>]}
+
+
+============================== 2022-07-06 22:04:27.762922 | d7e25531-ce0f-4167-9f7f-272a6ad52ada ==============================
+22:04:27.762942 [info ] [MainThread]: Running with dbt=1.1.1
+22:04:27.763329 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['staging__users'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+22:04:27.763431 [debug] [MainThread]: Tracking: tracking
+22:04:27.773231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113245700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1132454c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113245b20>]}
+22:04:27.790930 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:04:27.791175 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:04:27.797090 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+22:04:27.805287 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:04:27.807833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd7e25531-ce0f-4167-9f7f-272a6ad52ada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1134a50d0>]}
+22:04:27.810245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd7e25531-ce0f-4167-9f7f-272a6ad52ada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113441d60>]}
+22:04:27.810404 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:04:27.810519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd7e25531-ce0f-4167-9f7f-272a6ad52ada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113441d30>]}
+22:04:27.811113 [info ] [MainThread]: 
+22:04:27.811363 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:04:27.811718 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323"
+22:04:27.811855 [debug] [ThreadPool]: Opening a new connection, currently in state init
+
+
+============================== 2022-07-06 22:04:27.937526 | fe2453d4-518a-40e5-9581-7aa20a972e34 ==============================
+22:04:27.937546 [info ] [MainThread]: Running with dbt=1.1.1
+22:04:27.937862 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:04:27.937954 [debug] [MainThread]: Tracking: tracking
+22:04:27.943854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ca56d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ca5640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ca57f0>]}
+22:04:27.959242 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:04:27.959382 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:04:27.959563 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:04:27.962622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fe2453d4-518a-40e5-9581-7aa20a972e34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1069470d0>]}
+22:04:27.965113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fe2453d4-518a-40e5-9581-7aa20a972e34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10691bdc0>]}
+22:04:27.965259 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:04:27.965368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fe2453d4-518a-40e5-9581-7aa20a972e34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10691be50>]}
+22:04:27.965698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10691be20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10691bd30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10691b8e0>]}
+22:04:28.614978 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323_dbt_tera"
+22:04:28.615321 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+22:04:28.902218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd7e25531-ce0f-4167-9f7f-272a6ad52ada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1134415e0>]}
+22:04:28.904251 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+22:04:28.905095 [info ] [MainThread]: 
+22:04:28.912214 [debug] [Thread-1  ]: Began running node model.hustle.staging__users
+22:04:28.912722 [info ] [Thread-1  ]: 1 of 1 START table model dbt_tera.staging__users ............................... [RUN]
+22:04:28.913354 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.hustle.staging__users"
+22:04:28.913560 [debug] [Thread-1  ]: Began compiling node model.hustle.staging__users
+22:04:28.913809 [debug] [Thread-1  ]: Compiling model.hustle.staging__users
+22:04:28.917901 [debug] [Thread-1  ]: Writing injected SQL for node "model.hustle.staging__users"
+22:04:28.918592 [debug] [Thread-1  ]: finished collecting timing info
+22:04:28.918794 [debug] [Thread-1  ]: Began executing node model.hustle.staging__users
+22:04:28.952789 [debug] [Thread-1  ]: Writing runtime SQL for node "model.hustle.staging__users"
+22:04:28.953330 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+22:04:28.953494 [debug] [Thread-1  ]: On model.hustle.staging__users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "default", "target_name": "dev", "node_id": "model.hustle.staging__users"} */
+
+
+  create or replace table `portfolio-351323`.`dbt_tera`.`staging__users`
+  
+  
+  OPTIONS()
+  as (
+    
+
+
+SELECT  RANK() OVER (PARTITION BY created_dt ORDER BY created_dt ASC) AS id
+      , created_dt
+
+FROM   `portfolio-351323`.`dbt_tera`.`staging__date`
+  );
+  
+22:04:31.652308 [debug] [Thread-1  ]: finished collecting timing info
+22:04:31.652972 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd7e25531-ce0f-4167-9f7f-272a6ad52ada', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113564610>]}
+22:04:31.653383 [info ] [Thread-1  ]: 1 of 1 OK created table model dbt_tera.staging__users .......................... [[32mCREATE TABLE (19.2k rows, 0 processed)[0m in 2.74s]
+22:04:31.653869 [debug] [Thread-1  ]: Finished running node model.hustle.staging__users
+22:04:31.655066 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:04:31.655463 [info ] [MainThread]: 
+22:04:31.655741 [info ] [MainThread]: Finished running 1 table model in 3.84s.
+22:04:31.655981 [debug] [MainThread]: Connection 'master' was properly closed.
+22:04:31.656104 [debug] [MainThread]: Connection 'model.hustle.staging__users' was properly closed.
+22:04:31.661128 [info ] [MainThread]: 
+22:04:31.661417 [info ] [MainThread]: [32mCompleted successfully[0m
+22:04:31.661655 [info ] [MainThread]: 
+22:04:31.661858 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+22:04:31.662145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113495400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113495b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113441a60>]}
+
+
+============================== 2022-07-06 22:09:10.384504 | 88006193-b928-444c-b832-71fd58e43d04 ==============================
+22:09:10.384538 [info ] [MainThread]: Running with dbt=1.1.1
+22:09:10.385231 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:09:10.385473 [debug] [MainThread]: Tracking: tracking
+22:09:10.394173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10742a3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107413ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107413d00>]}
+22:09:10.409527 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:09:10.409756 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:09:10.415549 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+22:09:10.423302 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:09:10.425733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '88006193-b928-444c-b832-71fd58e43d04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10757d0d0>]}
+22:09:10.428050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '88006193-b928-444c-b832-71fd58e43d04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107511fd0>]}
+22:09:10.428183 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:09:10.428287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '88006193-b928-444c-b832-71fd58e43d04', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107511a90>]}
+22:09:10.428566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075112b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107511f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107511820>]}
+
+
+============================== 2022-07-06 22:09:16.301443 | 84d4aee7-b2c7-432a-abd0-86031f43e43d ==============================
+22:09:16.301471 [info ] [MainThread]: Running with dbt=1.1.1
+22:09:16.301794 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:09:16.301899 [debug] [MainThread]: Tracking: tracking
+22:09:16.307656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108873e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108873c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108873d00>]}
+22:09:16.321975 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:09:16.322225 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:09:16.328090 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+22:09:16.334777 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:09:16.337016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '84d4aee7-b2c7-432a-abd0-86031f43e43d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089de0d0>]}
+22:09:16.339365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '84d4aee7-b2c7-432a-abd0-86031f43e43d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108971ca0>]}
+22:09:16.339495 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:09:16.339603 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84d4aee7-b2c7-432a-abd0-86031f43e43d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108971c70>]}
+22:09:16.339902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108971490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108971fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108971b20>]}
+
+
+============================== 2022-07-06 22:24:04.538733 | 90afac7d-bc70-40f1-b62b-f8517efe43b5 ==============================
+22:24:04.538759 [info ] [MainThread]: Running with dbt=1.1.1
+22:24:04.539087 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:24:04.539169 [debug] [MainThread]: Tracking: tracking
+22:24:04.546059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e1aa00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e03fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e03f10>]}
+22:24:04.560928 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:24:04.561194 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__date.sql
+22:24:04.567133 [debug] [MainThread]: 1699: static parser successfully parsed staging__date.sql
+22:24:04.573836 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:24:04.576284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '90afac7d-bc70-40f1-b62b-f8517efe43b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f840d0>]}
+22:24:04.578640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '90afac7d-bc70-40f1-b62b-f8517efe43b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f15af0>]}
+22:24:04.578772 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:24:04.578881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '90afac7d-bc70-40f1-b62b-f8517efe43b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f15bb0>]}
+22:24:04.579166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f152e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f15fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f15970>]}
+
+
+============================== 2022-07-06 22:24:40.729269 | 9dcb0fe6-8f2e-493b-b52d-8926e9a744a6 ==============================
+22:24:40.729306 [info ] [MainThread]: Running with dbt=1.1.1
+22:24:40.729677 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:24:40.729763 [debug] [MainThread]: Tracking: tracking
+22:24:40.737331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ae59d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ae5a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ae58b0>]}
+22:24:40.752013 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:24:40.752218 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__date.sql
+22:24:40.758152 [debug] [MainThread]: 1699: static parser successfully parsed staging__date.sql
+22:24:40.764753 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:24:40.766984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9dcb0fe6-8f2e-493b-b52d-8926e9a744a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057c30d0>]}
+22:24:40.769215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9dcb0fe6-8f2e-493b-b52d-8926e9a744a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b8ce80>]}
+22:24:40.769340 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:24:40.769443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9dcb0fe6-8f2e-493b-b52d-8926e9a744a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b8cd90>]}
+22:24:40.769731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b8cf70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b8cc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b8ca60>]}
+
+
+============================== 2022-07-06 22:24:49.063961 | a9672050-af46-451d-8860-db48aa70e247 ==============================
+22:24:49.063995 [info ] [MainThread]: Running with dbt=1.1.1
+22:24:49.064316 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:24:49.064411 [debug] [MainThread]: Tracking: tracking
+22:24:49.071993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f5de80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f5d970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f5da00>]}
+22:24:49.087196 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:24:49.087439 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__date.sql
+22:24:49.093318 [debug] [MainThread]: 1699: static parser successfully parsed staging__date.sql
+22:24:49.099947 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:24:49.102214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a9672050-af46-451d-8860-db48aa70e247', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090c6f10>]}
+22:24:49.104447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a9672050-af46-451d-8860-db48aa70e247', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109004eb0>]}
+22:24:49.104576 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:24:49.104677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a9672050-af46-451d-8860-db48aa70e247', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109004f10>]}
+22:24:49.104957 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109004ee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109004e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090049a0>]}
+
+
+============================== 2022-07-06 22:24:52.701365 | f2e9f1e1-c4d3-4746-a7f6-2ba78113e1ab ==============================
+22:24:52.701403 [info ] [MainThread]: Running with dbt=1.1.1
+22:24:52.701737 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:24:52.701818 [debug] [MainThread]: Tracking: tracking
+22:24:52.708704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107928550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079284c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107928730>]}
+22:24:52.723593 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:24:52.723838 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__date.sql
+22:24:52.729758 [debug] [MainThread]: 1699: static parser successfully parsed staging__date.sql
+22:24:52.736334 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:24:52.738580 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f2e9f1e1-c4d3-4746-a7f6-2ba78113e1ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090140d0>]}
+22:24:52.740872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f2e9f1e1-c4d3-4746-a7f6-2ba78113e1ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1085945e0>]}
+22:24:52.741005 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:24:52.741111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f2e9f1e1-c4d3-4746-a7f6-2ba78113e1ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077f60d0>]}
+22:24:52.741407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079291c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10793c820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10793c490>]}
+
+
+============================== 2022-07-06 22:24:56.105490 | b8b0ff9d-585e-45f5-ba84-18c37261feb8 ==============================
+22:24:56.105513 [info ] [MainThread]: Running with dbt=1.1.1
+22:24:56.105892 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:24:56.105996 [debug] [MainThread]: Tracking: tracking
+22:24:56.112780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074f0130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074f0640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074f05b0>]}
+22:24:56.127329 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:24:56.127456 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:24:56.127639 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:24:56.130512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b8b0ff9d-585e-45f5-ba84-18c37261feb8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10761f0d0>]}
+22:24:56.132856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b8b0ff9d-585e-45f5-ba84-18c37261feb8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107599cd0>]}
+22:24:56.132985 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:24:56.133087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b8b0ff9d-585e-45f5-ba84-18c37261feb8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107599d30>]}
+22:24:56.133372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107599d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107599c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075997c0>]}
+
+
+============================== 2022-07-06 22:25:23.814345 | 37885f4e-53d1-4200-9745-c81d89c67d84 ==============================
+22:25:23.814375 [info ] [MainThread]: Running with dbt=1.1.1
+22:25:23.814779 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:25:23.814886 [debug] [MainThread]: Tracking: tracking
+22:25:23.822918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c23670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c23370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c231f0>]}
+22:25:23.838636 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:25:23.838886 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__date.sql
+22:25:23.844896 [debug] [MainThread]: 1699: static parser successfully parsed staging__date.sql
+22:25:23.851955 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:25:23.854272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '37885f4e-53d1-4200-9745-c81d89c67d84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a140d0>]}
+22:25:23.856621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '37885f4e-53d1-4200-9745-c81d89c67d84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107856df0>]}
+22:25:23.856757 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:25:23.856863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '37885f4e-53d1-4200-9745-c81d89c67d84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106aef0a0>]}
+22:25:23.857160 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105de3610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107856af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078568b0>]}
+
+
+============================== 2022-07-06 22:25:26.010178 | 510618e0-588f-4870-93fb-b5b04513b26f ==============================
+22:25:26.010212 [info ] [MainThread]: Running with dbt=1.1.1
+22:25:26.010595 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:25:26.010684 [debug] [MainThread]: Tracking: tracking
+22:25:26.016894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d390a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d62520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d626a0>]}
+22:25:26.031255 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:25:26.031370 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:25:26.031531 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:25:26.034435 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '510618e0-588f-4870-93fb-b5b04513b26f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a0cf40>]}
+22:25:26.036786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '510618e0-588f-4870-93fb-b5b04513b26f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107983790>]}
+22:25:26.036921 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:25:26.037023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '510618e0-588f-4870-93fb-b5b04513b26f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079837f0>]}
+22:25:26.037316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079837c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107983730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107983280>]}
+
+
+============================== 2022-07-06 22:25:45.602267 | 494f69c4-02ef-42da-b5df-9a8ad006a3fb ==============================
+22:25:45.602305 [info ] [MainThread]: Running with dbt=1.1.1
+22:25:45.602692 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:25:45.602798 [debug] [MainThread]: Tracking: tracking
+22:25:45.610172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117a59d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117a5a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117a58b0>]}
+22:25:45.625210 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:25:45.625424 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__users.sql
+22:25:45.631324 [debug] [MainThread]: 1699: static parser successfully parsed staging__users.sql
+22:25:45.637898 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:25:45.640154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '494f69c4-02ef-42da-b5df-9a8ad006a3fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11247ef70>]}
+22:25:45.642429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '494f69c4-02ef-42da-b5df-9a8ad006a3fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1123bcd90>]}
+22:25:45.642554 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:25:45.642652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '494f69c4-02ef-42da-b5df-9a8ad006a3fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1123bce20>]}
+22:25:45.642943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1123bcdf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1123bcd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1123bc8b0>]}
+
+
+============================== 2022-07-06 22:26:06.309710 | 53ac1de9-dd42-4ce1-aa08-2b99a4dfe7b5 ==============================
+22:26:06.309743 [info ] [MainThread]: Running with dbt=1.1.1
+22:26:06.310102 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:26:06.310194 [debug] [MainThread]: Tracking: tracking
+22:26:06.317130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058a7df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058a7af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058a7970>]}
+22:26:06.331877 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:26:06.332103 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__date.sql
+22:26:06.338063 [debug] [MainThread]: 1699: static parser successfully parsed staging__date.sql
+22:26:06.344832 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:26:06.347107 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '53ac1de9-dd42-4ce1-aa08-2b99a4dfe7b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1065840d0>]}
+22:26:06.349567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '53ac1de9-dd42-4ce1-aa08-2b99a4dfe7b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106515cd0>]}
+22:26:06.349737 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:26:06.349849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '53ac1de9-dd42-4ce1-aa08-2b99a4dfe7b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106515d90>]}
+22:26:06.350169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105871760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058710d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105871e20>]}
+
+
+============================== 2022-07-06 22:26:23.043468 | b1871b2f-1aaf-460e-bf26-80deb8523729 ==============================
+22:26:23.043493 [info ] [MainThread]: Running with dbt=1.1.1
+22:26:23.043853 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:26:23.043946 [debug] [MainThread]: Tracking: tracking
+22:26:23.051159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b27d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b27df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b27b80>]}
+22:26:23.065724 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:26:23.065956 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__date.sql
+22:26:23.071889 [debug] [MainThread]: 1699: static parser successfully parsed staging__date.sql
+22:26:23.078667 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:26:23.080906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b1871b2f-1aaf-460e-bf26-80deb8523729', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059140d0>]}
+22:26:23.083170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b1871b2f-1aaf-460e-bf26-80deb8523729', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105796d00>]}
+22:26:23.083297 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:26:23.083399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b1871b2f-1aaf-460e-bf26-80deb8523729', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049f1760>]}
+22:26:23.083694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049f1760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105796b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105796a00>]}
+
+
+============================== 2022-07-06 22:26:31.098559 | 1ad24469-6974-4ccb-9d80-d0aea8153860 ==============================
+22:26:31.098595 [info ] [MainThread]: Running with dbt=1.1.1
+22:26:31.098957 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:26:31.099042 [debug] [MainThread]: Tracking: tracking
+22:26:31.106366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e485e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e48550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e48700>]}
+22:26:31.121391 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:26:31.121624 [debug] [MainThread]: Partial parsing: updated file: hustle://models/staging__date.sql
+22:26:31.127514 [debug] [MainThread]: 1699: static parser successfully parsed staging__date.sql
+22:26:31.134170 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:26:31.136428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1ad24469-6974-4ccb-9d80-d0aea8153860', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106fc50d0>]}
+22:26:31.138695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1ad24469-6974-4ccb-9d80-d0aea8153860', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e5f100>]}
+22:26:31.138825 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:26:31.138930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1ad24469-6974-4ccb-9d80-d0aea8153860', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e5ffd0>]}
+22:26:31.139228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e19670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e19370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e5ffd0>]}
+
+
+============================== 2022-07-06 22:26:35.325542 | b16028e5-bff2-4aa9-9b95-e01b0d350de1 ==============================
+22:26:35.325560 [info ] [MainThread]: Running with dbt=1.1.1
+22:26:35.326013 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['staging__date'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+22:26:35.326104 [debug] [MainThread]: Tracking: tracking
+22:26:35.334369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095d6d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095d6100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095d6130>]}
+22:26:35.353136 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:26:35.353269 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:26:35.353441 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:26:35.356187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b16028e5-bff2-4aa9-9b95-e01b0d350de1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0310d0>]}
+22:26:35.358828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b16028e5-bff2-4aa9-9b95-e01b0d350de1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109676a60>]}
+22:26:35.359047 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:26:35.359183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b16028e5-bff2-4aa9-9b95-e01b0d350de1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109676ac0>]}
+22:26:35.360056 [info ] [MainThread]: 
+22:26:35.360482 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:26:35.360954 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323"
+22:26:35.361099 [debug] [ThreadPool]: Opening a new connection, currently in state init
+
+
+============================== 2022-07-06 22:26:35.986520 | 7dc3a678-e039-49c6-8f5f-74a58e88a186 ==============================
+22:26:35.986549 [info ] [MainThread]: Running with dbt=1.1.1
+22:26:35.986881 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:26:35.986983 [debug] [MainThread]: Tracking: tracking
+22:26:35.994140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088de040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088c7d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088c7c10>]}
+22:26:36.010042 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:26:36.010168 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:26:36.010344 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:26:36.013253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7dc3a678-e039-49c6-8f5f-74a58e88a186', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089fcf10>]}
+22:26:36.015720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7dc3a678-e039-49c6-8f5f-74a58e88a186', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089788b0>]}
+22:26:36.015860 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:26:36.015966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7dc3a678-e039-49c6-8f5f-74a58e88a186', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108978910>]}
+22:26:36.016280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089788e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108978850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089783a0>]}
+22:26:36.254330 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323_dbt_tera"
+22:26:36.254796 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+22:26:36.587040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b16028e5-bff2-4aa9-9b95-e01b0d350de1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a001d30>]}
+22:26:36.587505 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+22:26:36.587696 [info ] [MainThread]: 
+22:26:36.592107 [debug] [Thread-1  ]: Began running node model.hustle.staging__date
+22:26:36.592561 [info ] [Thread-1  ]: 1 of 1 START table model dbt_tera.staging__date ................................ [RUN]
+22:26:36.593338 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.hustle.staging__date"
+22:26:36.593556 [debug] [Thread-1  ]: Began compiling node model.hustle.staging__date
+22:26:36.593766 [debug] [Thread-1  ]: Compiling model.hustle.staging__date
+22:26:36.597136 [debug] [Thread-1  ]: Writing injected SQL for node "model.hustle.staging__date"
+22:26:36.598641 [debug] [Thread-1  ]: finished collecting timing info
+22:26:36.598778 [debug] [Thread-1  ]: Began executing node model.hustle.staging__date
+22:26:36.606424 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+22:26:37.104638 [debug] [Thread-1  ]: Writing runtime SQL for node "model.hustle.staging__date"
+22:26:37.106894 [debug] [Thread-1  ]: On model.hustle.staging__date: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "default", "target_name": "dev", "node_id": "model.hustle.staging__date"} */
+
+
+  create or replace table `portfolio-351323`.`dbt_tera`.`staging__date`
+  
+  
+  OPTIONS()
+  as (
+    
+
+WITH 
+  
+date_array_cte AS (
+
+    SELECT  GENERATE_DATE_ARRAY('1970-01-01', CURRENT_DATE, INTERVAL 1 DAY) AS created_date
+
+)
+
+, date_cte AS (
+
+    SELECT  x AS created_dt
+          , RANK() OVER (ORDER BY x ASC) AS id
+    FROM    date_array_cte, UNNEST(created_date) AS x 
+
+)
+
+
+SELECT  id
+      , created_dt
+FROM    date_cte
+  );
+  
+22:26:39.737703 [debug] [Thread-1  ]: finished collecting timing info
+22:26:39.738414 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b16028e5-bff2-4aa9-9b95-e01b0d350de1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a20df70>]}
+22:26:39.738861 [info ] [Thread-1  ]: 1 of 1 OK created table model dbt_tera.staging__date ........................... [[32mCREATE TABLE (19.2k rows, 0 processed)[0m in 3.15s]
+22:26:39.739382 [debug] [Thread-1  ]: Finished running node model.hustle.staging__date
+22:26:39.740715 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:26:39.741217 [info ] [MainThread]: 
+22:26:39.741571 [info ] [MainThread]: Finished running 1 table model in 4.38s.
+22:26:39.741871 [debug] [MainThread]: Connection 'master' was properly closed.
+22:26:39.742030 [debug] [MainThread]: Connection 'model.hustle.staging__date' was properly closed.
+22:26:39.748050 [info ] [MainThread]: 
+22:26:39.748388 [info ] [MainThread]: [32mCompleted successfully[0m
+22:26:39.748670 [info ] [MainThread]: 
+22:26:39.748896 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+22:26:39.749243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109676220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095c21f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095c4d90>]}
+
+
+============================== 2022-07-06 22:26:47.033242 | 0206e568-de54-4e4d-9d22-1318faff5784 ==============================
+22:26:47.033269 [info ] [MainThread]: Running with dbt=1.1.1
+22:26:47.033651 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'parse_only': False, 'select': ['staging__date'], 'which': 'compile', 'rpc_method': 'compile', 'indirect_selection': 'eager'}
+22:26:47.033766 [debug] [MainThread]: Tracking: tracking
+22:26:47.041621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1122a37c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1122a3850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1122a35e0>]}
+22:26:47.058003 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:26:47.058145 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:26:47.058356 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:26:47.061970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0206e568-de54-4e4d-9d22-1318faff5784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1123ec0d0>]}
+22:26:47.064606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0206e568-de54-4e4d-9d22-1318faff5784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11235a040>]}
+22:26:47.064742 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:26:47.064865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0206e568-de54-4e4d-9d22-1318faff5784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1121d92b0>]}
+22:26:47.065400 [info ] [MainThread]: 
+22:26:47.065609 [debug] [MainThread]: Acquiring new bigquery connection "master"
+22:26:47.065941 [debug] [ThreadPool]: Acquiring new bigquery connection "list_portfolio-351323_dbt_tera"
+22:26:47.066071 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:26:47.780960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0206e568-de54-4e4d-9d22-1318faff5784', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1123b8bb0>]}
+22:26:47.781651 [info ] [MainThread]: Concurrency: 5 threads (target='dev')
+22:26:47.781924 [info ] [MainThread]: 
+22:26:47.785081 [debug] [Thread-1  ]: Began running node model.hustle.staging__date
+22:26:47.785423 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.hustle.staging__date"
+22:26:47.785571 [debug] [Thread-1  ]: Began compiling node model.hustle.staging__date
+22:26:47.785748 [debug] [Thread-1  ]: Compiling model.hustle.staging__date
+22:26:47.788409 [debug] [Thread-1  ]: Writing injected SQL for node "model.hustle.staging__date"
+22:26:47.788864 [debug] [Thread-1  ]: finished collecting timing info
+22:26:47.788990 [debug] [Thread-1  ]: Began executing node model.hustle.staging__date
+22:26:47.789119 [debug] [Thread-1  ]: finished collecting timing info
+22:26:47.789433 [debug] [Thread-1  ]: Finished running node model.hustle.staging__date
+22:26:47.790189 [debug] [MainThread]: Connection 'master' was properly closed.
+22:26:47.790320 [debug] [MainThread]: Connection 'model.hustle.staging__date' was properly closed.
+22:26:47.794106 [info ] [MainThread]: Done.
+22:26:47.794411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11156f070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112faa610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112faa580>]}
+
+
+============================== 2022-07-06 22:26:53.383408 | e6d35ffe-e25e-456b-9a46-eba84e366010 ==============================
+22:26:53.383436 [info ] [MainThread]: Running with dbt=1.1.1
+22:26:53.383816 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/teraearlywine/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+22:26:53.383912 [debug] [MainThread]: Tracking: tracking
+22:26:53.391778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bb9ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bb9b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bb98e0>]}
+22:26:53.406734 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+22:26:53.406857 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+22:26:53.407043 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hustle.example
+
+22:26:53.409823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e6d35ffe-e25e-456b-9a46-eba84e366010', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ceb0d0>]}
+22:26:53.412275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e6d35ffe-e25e-456b-9a46-eba84e366010', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c5adc0>]}
+22:26:53.412419 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 191 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+22:26:53.412522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e6d35ffe-e25e-456b-9a46-eba84e366010', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cc20d0>]}
+22:26:53.412821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cc20a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c5ab20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c5a8e0>]}
