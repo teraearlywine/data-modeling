@@ -9,3 +9,14 @@
 #         tests:
 #           - unique
 #           - not_null
+
+version: 2 
+
+models:
+  - name: staging__date
+    description: "Creating pay data, id & date for use in downstream modeling"
+    columns: 
+      - name: id
+        description: "The id for the table, one row for every id & date"
+      - name: date
+        description: "The date for the table, one row for every id & date"
