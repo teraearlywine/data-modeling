@@ -1,1 +1,5 @@
 .dbtenv/
+
+# ignore DBT folders
+target/
+logs/
