@@ -1,7 +1,7 @@
 
-## This is just a text file to highlight the SQL I used to create version table. 
+## This is just a text file to highlight the SQL I used to create my play modeling data. 
 
-DBT doesn't support DDL statements
+DBT doesn't support DDL statements, all operations were completed in BQ
 
 ```
 CREATE TABLE IF NOT EXISTS dbt_tera.versions (
