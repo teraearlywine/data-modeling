@@ -4,7 +4,7 @@
 DBT doesn't support DDL statements, all operations were completed in BQ
 
 ```
-CREATE TABLE IF NOT EXISTS dbt_tera.versions (
+CREATE TABLE IF NOT EXISTS dev_tera.versions (
     id         STRING 
   , name       STRING NOT NULL
   , created_dt DATE NOT NULL
@@ -13,10 +13,10 @@ CREATE TABLE IF NOT EXISTS dbt_tera.versions (
 ```
 
 ```
-INSERT INTO dbt_tera.versions(id, name, created_dt, event_type)
+INSERT INTO dev_tera.versions(id, name, created_dt, event_type)
 
 VALUES
-        (GENERATE_UUID(), 'Tera', CURRENT_DATE, 'CoolPersonA')
-      , (GENERATE_UUID(), 'David', CURRENT_DATE, 'CoolPersonB')
+        (GENERATE_UUID(), 'Tera', CURRENT_DATE, 'completed_dishes')
+      , (GENERATE_UUID(), 'David', CURRENT_DATE, 'cleaned_house')
 ;
 ```
