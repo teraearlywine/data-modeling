@@ -1,6 +1,6 @@
 {{
     config(
-        materialized = "view"
+        materialized = "table"
     )
 }}
 
@@ -10,4 +10,4 @@ SELECT  id
       , created_dt
       , event_type
 
-FROM   `portfolio-351323.dev_tera.versions` 
+FROM   `portfolio-351323.dev_tera.versions`
