@@ -30,10 +30,3 @@ SELECT  id
       , created_dt
 
 FROM    date_cte
-
-  {% if is_incremental() %}
-    -- recalculate latest day's data + previous
-    -- NOTE: The _dbt_max_partition variable is used to introspect the destination table
-    WHERE created_dt >= date_sub(date(_dbt_max_partition), INTERVAL 1 DAY)
-
-  {% endif %}

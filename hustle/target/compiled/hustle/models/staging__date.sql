@@ -21,5 +21,3 @@ SELECT  id
       , created_dt
 
 FROM    date_cte
-
-  

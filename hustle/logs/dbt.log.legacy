@@ -30,3 +30,8 @@
 2022-07-06 22:36:42.619715 (MainThread): unclosed <ssl.SSLSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.86.174', 53040), raddr=('142.250.191.74', 443)>
 2022-07-06 22:36:42.677967 (Thread-1): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
 2022-07-06 22:36:52.264200 (MainThread): unclosed <ssl.SSLSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.86.174', 53044), raddr=('142.250.191.74', 443)>
+2022-07-09 17:46:27.496320 (MainThread): unclosed <ssl.SSLSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.86.174', 54484), raddr=('142.250.191.74', 443)>
+2022-07-09 17:47:35.851239 (MainThread): unclosed <ssl.SSLSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.86.174', 54500), raddr=('142.250.191.74', 443)>
+2022-07-09 17:48:01.769435 (MainThread): unclosed <ssl.SSLSocket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('192.168.86.174', 54515), raddr=('142.250.191.74', 443)>
+2022-07-09 17:48:02.123267 (Thread-1): This method will be deprecated in future versions. Please use Table.time_partitioning.type_ instead.
+2022-07-09 17:48:02.131256 (Thread-1): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
