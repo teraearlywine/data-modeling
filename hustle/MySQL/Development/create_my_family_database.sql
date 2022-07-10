@@ -21,5 +21,16 @@ CREATE TABLE IF NOT EXISTS my_people.family_hobbies (
 
 );
 
+CREATE TABLE IF NOT EXISTS my_people.family_birthdays (
+
+    id INT AUTO_INCREMENT PRIMARY KEY
+  , birthdate DATE NOT NULL
+  , created_ts TIMESTAMP NOT NULL 
+  , family_id INT NOT NULL
+  , FOREIGN KEY (family_id) REFERENCES family(id)
+
+);
+
+
 
 
