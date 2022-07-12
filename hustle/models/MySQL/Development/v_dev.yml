@@ -1,0 +1,9 @@
+version: 2
+
+soruces: 
+  - name: Localhost
+    database: my_people
+    tables:
+      - name: family
+      - name: family_hobbies
+      - name: family_birthdays
