@@ -20,6 +20,7 @@ family_cte AS (
 -- inject artificial parents version
 -- create primary key representing parent_id
 , parent_version_cte AS (
+      
       SELECT  c.* 
             , p.id AS parent_id
       FROM (
