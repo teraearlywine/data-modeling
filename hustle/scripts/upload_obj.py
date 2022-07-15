@@ -6,7 +6,7 @@ def upload_blob(bucket_name, source_file_name, destination_blob_name):
     bucket_name = "data-pipeline12345"
 
     # The path to your file to upload
-    source_file_name = "local/path/to/file"
+    source_file_name = "Users/teraearlywine/Dev/data-modeling/hustle/scripts"
 
     # The ID of your GCS object
     destination_blob_name = "portfolio-351323"
