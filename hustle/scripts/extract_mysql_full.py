@@ -31,7 +31,7 @@ else:
 
 
 m_query = "SELECT * FROM family"
-local_filename = "family_extract.csv"
+local_filename = "files/family_extract.csv"
 
 m_cursor = conn.cursor()
 m_cursor.execute(m_query)
