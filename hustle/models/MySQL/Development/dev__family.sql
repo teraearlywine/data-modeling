@@ -17,3 +17,5 @@ CALL add_new_member('Emily','Pultrum-Grim',CURRENT_TIMESTAMP, "Mother");
 CALL add_new_member('Joan','Manning',CURRENT_TIMESTAMP, "Grand Mother");
 
 CALL add_new_member('Wanda','Grim',CURRENT_TIMESTAMP, "Grand Mother");
+
+CALL add_new_member('Thomas','Rutherford',CURRENT_TIMESTAMP, "Cousin");
