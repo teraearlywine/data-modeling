@@ -64,7 +64,6 @@ source_file_name = parser.get("gcp_config", "source_file_name")
 destination_blob_name = parser.get("gcp_config", "destination_blob_name")
 
 # Upload to GCP 
-
 storage_client = storage.Client()
 bucket = storage_client.bucket(bucket_name)
 blob = bucket.blob(destination_blob_name)
