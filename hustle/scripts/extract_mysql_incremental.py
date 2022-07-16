@@ -1,5 +1,5 @@
 ## Create mysql extraction script.
-## $ python3 extract_mysql_full.py in terminal to execute
+## $ python3 extract_mysql_incremental.py in terminal to execute
 
 import os
 import pymysql
