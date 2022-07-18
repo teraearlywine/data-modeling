@@ -18,3 +18,4 @@ SELECT  id
 FROM   `portfolio-351323.dev_tera.family_members`
 
 -- TODO: turn table into source (how?)
+-- How do I turn this into a CDC?
