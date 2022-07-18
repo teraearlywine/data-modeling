@@ -8,5 +8,5 @@
 
 SELECT  id
       , CONCAT(first_name, " ", last_name) AS full_name
-
+      
 FROM    {{ ref('staging__versions') }}
