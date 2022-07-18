@@ -1,6 +1,11 @@
 {{
       config(
-            materialized = "table"
+              materialized = "table"
+            , partition_by = {
+                    'field': 'created_dt'
+                  , 'data_type': 'date'
+                  , 'granularity': 'month' 
+                  }
       )
 }}
 
