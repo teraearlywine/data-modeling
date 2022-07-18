@@ -6,9 +6,11 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/Users/teraearlywine/Dev/keys/port
 # Construct a BigQuery client object.
 client = bigquery.Client()
 
-# TODO(developer): Set table_id to the ID of the table to create.
+# Project to add data too
+# Works without needing to create a new table
 table_id = "portfolio-351323.dev_tera.family_members"
 
+# Table schema
 job_config = bigquery.LoadJobConfig(
     schema=[
         bigquery.SchemaField("id", "INTEGER"),
@@ -21,11 +23,11 @@ job_config = bigquery.LoadJobConfig(
     # The source format defaults to CSV, so the line below is optional.
     # source_format=bigquery.SourceFormat.CSV,
 )
-uri = 'gs://data-pipeline12345/portfolio-351323'
+uri = 'gs://data-pipeline12345/family_db'
 
 load_job = client.load_table_from_uri(
     uri, table_id, job_config=job_config
-)  # Make an API request.
+)  # Make an API request. 
 
 load_job.result()  # Waits for the job to complete.
 

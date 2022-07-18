@@ -38,14 +38,14 @@ result = bq_cursor.fetchone()
 # there's only one row & column returned
 last_updated_warehouse = result[0]
 bq_cursor.close()
-bq_cursor.close()
+conn.commit()
 
 m_query = "SELECT * FROM family WHERE created_ts > %s;"
 
 local_filename = "files/family_extract.csv"
 
 m_cursor = conn.cursor()
-m_cursor.execute(m_query, (last_updated_warehouse,))
+m_cursor.execute(m_query, (last_updated_warehouse))
 results = m_cursor.fetchall()
 
 with open(local_filename, 'w') as fp:
