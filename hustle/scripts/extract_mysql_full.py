@@ -40,9 +40,10 @@ results = m_cursor.fetchall()
 with open(local_filename, 'w') as fp:
     csv_w = csv.writer(fp, delimiter = ',')
     csv_w.writerows(results)
-    fp.close()
-    m_cursor.close()
-    conn.close()
+    
+fp.close()
+m_cursor.close()
+conn.close()
 
 
 # Load the GCP Credential values

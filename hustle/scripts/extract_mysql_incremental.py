@@ -30,18 +30,26 @@ if conn is None:
 else:
     print("MySQL Connection Established!")
 
-bq_sql = "SELECT COALESCE(MAX(DATE(created_ts)), '1900-01-01') FROM family"
+# Return newest data from family table
+
+bq_sql = """SELECT COALESCE(MAX(DATE(created_ts)), '1900-01-01') FROM family;"""
+
+# Creates new cursor to execute queries with
 bq_cursor = conn.cursor()
 bq_cursor.execute(bq_sql)
+
+# Adds next row to result files
 result = bq_cursor.fetchone()
 
-# there's only one row & column returned
+# Upload first row & close cursor
 last_updated_warehouse = result[0]
 bq_cursor.close()
+
+# Commits changes to stable storage
 conn.commit()
 
-m_query = "SELECT * FROM family WHERE created_ts > %s;"
-
+## MySQL query
+m_query = """SELECT * FROM family WHERE created_ts > %s;"""
 local_filename = "files/family_extract.csv"
 
 m_cursor = conn.cursor()
@@ -51,22 +59,29 @@ results = m_cursor.fetchall()
 with open(local_filename, 'w') as fp:
     csv_w = csv.writer(fp, delimiter = ',')
     csv_w.writerows(results)
-    fp.close()
-    m_cursor.close()
-    conn.close()
+
+fp.close()
+m_cursor.close()
+conn.close()
 
 
-# Load the GCP Credential values
-parser = configparser.ConfigParser()
-parser.read("pipeline.conf")
+# Load the GCP Credential values via parser
 bucket_name = parser.get("gcp_config", "bucket_name")
 source_file_name = parser.get("gcp_config", "source_file_name")
 destination_blob_name = parser.get("gcp_config", "destination_blob_name")
 
 # Upload to GCP 
+
+# Create client instance
 storage_client = storage.Client()
+ 
+# Name of bucket to be instantiated
 bucket = storage_client.bucket(bucket_name)
+
+# Name of blob to be instantiated
 blob = bucket.blob(destination_blob_name)
+
+# Upload to bucket the configured source file name
 blob.upload_from_filename(source_file_name)
 
 
