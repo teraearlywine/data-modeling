@@ -45,15 +45,16 @@ m_query = "SELECT * FROM family WHERE created_ts > %s;"
 local_filename = "files/family_extract.csv"
 
 m_cursor = conn.cursor()
-m_cursor.execute(m_query, (last_updated_warehouse))
+m_cursor.execute(m_query, last_updated_warehouse)
 results = m_cursor.fetchall()
 
-with open(local_filename, 'w') as fp:
+with open(local_filename, 'w', newline='') as fp:
     csv_w = csv.writer(fp, delimiter = ',')
     csv_w.writerows(results)
-    fp.close()
-    m_cursor.close()
-    conn.close()
+
+fp.close()
+m_cursor.close()
+conn.close()
 
 
 # Load the GCP Credential values
