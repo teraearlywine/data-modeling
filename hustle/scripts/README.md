@@ -12,4 +12,5 @@ The load job works, however I have to delete the table before running each of th
 I anticipate will need some sort of append or merge thing.
 
 TODO: 
-Figure out how to fix these things
+- Figure out how to fix these things
+- Write out API request pattern
