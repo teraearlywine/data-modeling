@@ -1,7 +1,13 @@
 import os
+import configparser
 from google.cloud import bigquery
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/Users/teraearlywine/Dev/keys/portfolio-351323-80ace0374e30.json"
+parser = configparser.ConfigParser()
+parser.read("pipeline.conf")
+
+local_gcp_cred = parser.get("food_gcp_config", "local_gcp_cred")
+
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = local_gcp_cred
 
 # Initialize a BQ client 
 

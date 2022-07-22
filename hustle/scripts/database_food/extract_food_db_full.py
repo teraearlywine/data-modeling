@@ -4,7 +4,6 @@ import csv
 import configparser
 from google.cloud import storage
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/Users/teraearlywine/Dev/keys/portfolio-351323-80ace0374e30.json"
 
 ## Configure MySQL connection using parser
 
@@ -61,8 +60,9 @@ ms_conn.close()
 bucket_name = parser.get("food_gcp_config", "bucket_name")
 source_file_name = parser.get("food_gcp_config", "source_file_name")
 destination_blob_name = parser.get("food_gcp_config", "destination_blob_name")
-
+local_gcp_cred = parser.get("food_gcp_config", "local_gcp_cred")
 # Upload to GCP 
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = local_gcp_cred
 
 storage_client = storage.Client()
 bucket = storage_client.bucket(bucket_name)
