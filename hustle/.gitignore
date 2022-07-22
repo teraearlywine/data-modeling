@@ -3,3 +3,6 @@
 # ignore DBT folders
 target/
 logs/
+
+scripts/database_food/pipeline.conf
+scripts/database_family/pipeline.conf
