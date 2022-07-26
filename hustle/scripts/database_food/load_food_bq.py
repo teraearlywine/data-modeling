@@ -17,12 +17,15 @@ table_id = "portfolio-351323.dev_tera.recipes"
 # Config job & set schema
 job_config = bigquery.LoadJobConfig(
      schema=[
-        bigquery.SchemaField("id", "INTEGER"),
-        bigquery.SchemaField("created_ts", "TIMESTAMP"),
-        bigquery.SchemaField("name", "STRING"),
-        bigquery.SchemaField("type","STRING"),
-        bigquery.SchemaField("difficulty_status","STRING"),
-        bigquery.SchemaField("url","STRING"),
+        bigquery.SchemaField("object", "STRING"),
+        bigquery.SchemaField("id", "STRING"),
+        bigquery.SchemaField("created_time", "TIMESTAMP"),
+        bigquery.SchemaField("last_edited_time","TIMESTAMP"),
+        bigquery.SchemaField("Difficulty Level ID","STRING"),
+        bigquery.SchemaField("Cuisine ID","STRING"),
+        bigquery.SchemaField("Meal Type ID","STRING"),
+        bigquery.SchemaField("URL","STRING"),
+
      ]
 )
 
