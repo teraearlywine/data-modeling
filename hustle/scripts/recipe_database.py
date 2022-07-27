@@ -14,16 +14,16 @@ headers = {
     "Notion-Version": "2022-06-28"
 }
 
-
 # For POST api calls in notion, in the URL you need a /query 
 # For GET api calls you don't.
 
 res = requests.post(url, headers=headers)
 data = res.json()
 
-# Create JSON file for viewing data structure
+# # Create JSON file for viewing data structure
+# json_export_file = "files/recipes_database.json"
 
-# with open('./recipe_api_data.json', 'w', encoding='utf8') as f:
+# with open(json_export_file, 'w', encoding='utf8') as f:
 #     json.dump(data, f, ensure_ascii=False)
 
 all_recipes = []
@@ -43,7 +43,7 @@ for results in data['results']:
     all_recipes.append(current_recipe)
 
 
-export_file = "recipes_database.csv"
+export_file = "files/recipes_database.csv"
 
 with open(export_file, 'w') as fp:
     csv_w = csv.writer(fp, delimiter = ",")
@@ -76,8 +76,8 @@ else:
 
 
 # Transform CSV to dataframe 
-mysql_db = pd.read_csv('recipes_database.csv', header=None)
-mysql_db.columns = ['object', 'id', 'created_time', 'last_edited_time', 'difficulty_level_id', 'cuisine_id', 'meal_type_id', 'url']
+mysql_db = pd.read_csv('files/recipes_database.csv', header=None)
+mysql_db.columns = ['object', 'id', 'created_time', 'last_edited_time', 'difficulty_level_id', 'cuisine_id', 'meal_type_id' ,'url']
 
 print(mysql_db.head())
 # Create query that takes above data & inserts into recipes db
@@ -96,4 +96,6 @@ for i,row in mysql_db.iterrows():
     print("Record inserted")
 
     ms_conn.commit()
+mysql_cursor.close()
+ms_conn.close()
 # TO DO -- figure out how to convert the ISO8601 timestamp format
