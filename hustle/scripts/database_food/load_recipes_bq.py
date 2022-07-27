@@ -19,12 +19,12 @@ job_config = bigquery.LoadJobConfig(
      schema=[
         bigquery.SchemaField("object", "STRING"),
         bigquery.SchemaField("id", "STRING"),
-        bigquery.SchemaField("created_time", "TIMESTAMP"),
-        bigquery.SchemaField("last_edited_time","TIMESTAMP"),
-        bigquery.SchemaField("Difficulty Level ID","STRING"),
-        bigquery.SchemaField("Cuisine ID","STRING"),
-        bigquery.SchemaField("Meal Type ID","STRING"),
-        bigquery.SchemaField("URL","STRING"),
+        bigquery.SchemaField("created_time", "STRING"),
+        bigquery.SchemaField("last_edited_time","STRING"),
+        bigquery.SchemaField("difficulty_level_id","STRING"),
+        bigquery.SchemaField("cuisine_id","STRING"),
+        bigquery.SchemaField("meal_type_id","STRING"),
+        bigquery.SchemaField("url","STRING"),
 
      ]
 )

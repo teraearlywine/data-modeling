@@ -31,7 +31,7 @@ else:
     print("MySQL connection established!")
 
 
-query = "SELECT * FROM recipes"
+query = "SELECT * FROM meals.recipes"
 local_filename = "files/recipes_extract.csv"
 
 # Create new cursor to execute query
