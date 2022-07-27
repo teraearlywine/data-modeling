@@ -9,7 +9,7 @@
     )
 }}
 
-SELECT  id
+SELECT  id AS recipe_id
       , DATE(created_time) AS created_dt
       , DATE(last_edited_time) AS last_edited_dt
       , difficulty_level_id
