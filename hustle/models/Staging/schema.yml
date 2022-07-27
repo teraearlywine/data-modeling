@@ -1,21 +1,5 @@
 version: 2 
 
 models:
-  - name: staging__date
-    description: "Creating pay data, id & date for use in downstream modeling"
-    columns: 
-      - name: id
-        description: "The id for the table, one row for every id & date"
-      - name: date
-        description: "The date for the table, one row for every id & date"
-  - name: staging__versions
-    description: "Creating my own data warehouse using DDL statements"
-    columns: 
-      - name: id
-        description: "The id for the version, one row for every id & date"
-      - name: name
-        description: "The first name of the person"
-      - name: created_dt
-        description: "Date of record insert"
-      - name: event_type
-        description: "Name of event"
+  - name: staging__recipes
+  - name: staging__recipe_attributes

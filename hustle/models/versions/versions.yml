@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: versions__recipes
+    description: Raw data from my notion recipe database
+    columns:
+      - name: id
+      - name: created_dt
+      - name: last_edited_dt
+      - name: difficulty_level_id
+      - name: cuisine_id
+      - name: meal_type_id
+      - name: url
+      - name: object 
+  - name: versions__recipe_attributes
+    description: Attributes of the recipes in my notion database
+    columns: 
+      - name: id
+      - name: name
+      - name: type
+      - name: multi_select
+      - name: url
+
