@@ -35,9 +35,10 @@ for results in data['results']:
     current_recipe.append(results['id'])
     current_recipe.append(results['created_time'])
     current_recipe.append(results['last_edited_time'])
-    current_recipe.append(results['properties']['Difficulty Level']['id'])  # difficulty level id
-    current_recipe.append(results['properties']['Cuisine']['id'])           # cuisine id
-    current_recipe.append(results['properties']['Meal Type']['id'])         # meal type id
+    current_recipe.append(results['properties'])
+    # current_recipe.append(results['properties']['Difficulty Level']['id'])  # difficulty level id
+    # current_recipe.append(results['properties']['Cuisine']['id'])           # cuisine id
+    # current_recipe.append(results['properties']['Meal Type']['id'])         # meal type id
     current_recipe.append(results['url'])
 
     all_recipes.append(current_recipe)
@@ -77,7 +78,7 @@ else:
 
 # Transform CSV to dataframe 
 mysql_db = pd.read_csv('files/recipes_database.csv', header=None)
-mysql_db.columns = ['object', 'id', 'created_time', 'last_edited_time', 'difficulty_level_id', 'cuisine_id', 'meal_type_id' ,'url']
+mysql_db.columns = ['object', 'id', 'created_time', 'last_edited_time', 'properties', 'url']
 
 print(mysql_db.head())
 # Create query that takes above data & inserts into recipes db
@@ -85,17 +86,18 @@ print(mysql_db.head())
 mysql_cursor = ms_conn.cursor()
 mysql_cursor.execute('CREATE DATABASE IF NOT EXISTS meals;')
 
-mysql_cursor.execute('CREATE TABLE IF NOT EXISTS meals.recipes(object VARCHAR(40), id VARCHAR(255), created_time VARCHAR(255), last_edited_time VARCHAR(255), difficulty_level_id VARCHAR(40), cuisine_id VARCHAR(40), meal_type_id VARCHAR(40), url VARCHAR(255));')
+mysql_cursor.execute('CREATE TABLE IF NOT EXISTS meals.recipes(object VARCHAR(40), id VARCHAR(255), created_time VARCHAR(255), last_edited_time VARCHAR(255), properties LONGTEXT, url VARCHAR(255));')
 record = mysql_cursor.fetchone()
 
 print("table is created")
 
 for i,row in mysql_db.iterrows():
-    sql = "INSERT INTO meals.recipes VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
+    sql = "INSERT INTO meals.recipes VALUES (%s,%s,%s,%s,%s,%s)"
     mysql_cursor.execute(sql, tuple(row))
     print("Record inserted")
 
     ms_conn.commit()
+
 mysql_cursor.close()
 ms_conn.close()
 # TO DO -- figure out how to convert the ISO8601 timestamp format
