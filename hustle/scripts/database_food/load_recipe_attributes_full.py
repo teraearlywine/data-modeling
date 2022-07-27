@@ -18,9 +18,9 @@ job_config = bigquery.LoadJobConfig(
           bigquery.SchemaField("id", "STRING")
         , bigquery.SchemaField("name", "STRING")
         , bigquery.SchemaField("type","STRING")
-        , bigquery.SchemaField("multi_select", "STRING"),
-        bigquery.SchemaField("url","STRING"),
-        bigquery.SchemaField("title","STRING"),
+        , bigquery.SchemaField("multi_select", "STRING")
+        , bigquery.SchemaField("url","STRING")
+        , bigquery.SchemaField("title","STRING")
     ]
 )
 

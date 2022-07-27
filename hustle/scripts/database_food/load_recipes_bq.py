@@ -6,7 +6,6 @@ parser = configparser.ConfigParser()
 parser.read("pipeline.conf")
 
 local_gcp_cred = parser.get("food_gcp_config", "local_gcp_cred")
-
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = local_gcp_cred
 
 # Initialize a BQ client 
@@ -21,11 +20,8 @@ job_config = bigquery.LoadJobConfig(
         bigquery.SchemaField("id", "STRING"),
         bigquery.SchemaField("created_time", "STRING"),
         bigquery.SchemaField("last_edited_time","STRING"),
-        bigquery.SchemaField("difficulty_level_id","STRING"),
-        bigquery.SchemaField("cuisine_id","STRING"),
-        bigquery.SchemaField("meal_type_id","STRING"),
-        bigquery.SchemaField("url","STRING"),
-
+        bigquery.SchemaField("properties", "STRING"),
+        bigquery.SchemaField("url","STRING")
      ]
 )
 
