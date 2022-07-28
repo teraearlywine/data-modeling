@@ -7,17 +7,15 @@ models:
       - name: id
       - name: created_dt
       - name: last_edited_dt
-      - name: difficulty_level_id
-      - name: cuisine_id
-      - name: meal_type_id
       - name: url
       - name: object 
+      - name: properties_array
   - name: versions__recipe_attributes
     description: Attributes of the recipes in my notion database
     columns: 
-      - name: id
-      - name: name
+      - name: property_id
+      - name: property_name
       - name: type
-      - name: multi_select
+      - name: attributes_array
       - name: url
 
