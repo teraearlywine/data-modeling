@@ -3,3 +3,4 @@
 # ignore DBT folders
 target/
 logs/
+dbt_packages/
