@@ -6,7 +6,7 @@
 
 WITH source_cte AS (
     
-  SELECT  id AS property_id
+  SELECT  id AS fk_property_id
         , name AS property_name
         , type
         , JSON_EXTRACT_ARRAY(PARSE_JSON(REPLACE(NULLIF(multi_select, 'NULL-PLACEHOLDER'), "'", '"')), "$.options") AS attributes_array

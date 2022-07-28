@@ -1,5 +1,27 @@
 version: 2 
 
 models:
-  - name: staging__recipes
-  - name: staging__recipe_attributes
+  - name: dim__recipes
+    description: Transformation layer, modeling type 2 dimensions
+    columns:
+      - name: recipe_id
+      - name: created_dt
+      - name: last_edited_dt
+      - name: url
+      - name: object
+      - name: fk_property_id
+  - name: dim__recipe_attributes
+    description: Transformation layer, modeling type 2 dimensions
+    columns:
+      - name: pk_attribute_id
+      - name: fk_property_id
+      - name: property_name
+      - name: type
+      - name: attribute_color
+      - name: attribute_name
+  - name: dim__properties
+    description: Transformation layer, modeling type 2 dimensions
+    columnes:
+      - name: property_id
+      - name: attribute_color
+      - name: attribute_name
