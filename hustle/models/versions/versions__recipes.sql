@@ -21,7 +21,6 @@ WITH source_cte AS (
           , JSON_EXTRACT_SCALAR(properties, '$.Link.id') 
           , JSON_EXTRACT_SCALAR(properties, '$.Meal Type.id')
           ] AS properties_array
-
   FROM   `portfolio-351323.dev_tera.recipes`
 
 )
