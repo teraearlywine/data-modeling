@@ -26,7 +26,8 @@ WITH source_cte AS (
 
 )
 
-SELECT  * EXCEPT(properties_array)
+SELECT  * EXCEPT(properties_array, properties_fanout)
+      , properties_fanout AS fk_property_id
 FROM    source_cte
 
         CROSS JOIN UNNEST(properties_array) AS properties_fanout
