@@ -67,10 +67,10 @@ mysql_db['url'].replace(to_replace="{}", value="NULL-PLACEHOLDER", inplace=True)
 mysql_db['title'].replace(to_replace="{}", value="NULL-PLACEHOLDER", inplace=True)
 
 mysql_db['created_time'].fillna("NULL-PLACEHOLDER", inplace=True)
-# mysql_db['created_time'].replace(to_replace="{}", value="NULL-PLACEHOLDER", inplace=True)
+mysql_db['created_time'].replace(to_replace="{}", value="NULL-PLACEHOLDER", inplace=True)
 
 mysql_db['last_edited_time'].fillna("NULL-PLACEHOLDER", inplace=True)
-# mysql_db['last_edited_time'].replace(to_replace="{}", value="NULL-PLACEHOLDER", inplace=True)
+mysql_db['last_edited_time'].replace(to_replace="{}", value="NULL-PLACEHOLDER", inplace=True)
 
 
 # Create cursor

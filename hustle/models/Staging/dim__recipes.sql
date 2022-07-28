@@ -14,7 +14,6 @@ WITH fields_cte AS (
           , ARRAY_REVERSE(ARRAY_AGG(COALESCE(last_edited_dt, '1970-01-01') ORDER BY created_dt))[OFFSET(0)] AS last_edited_dt
           , ARRAY_REVERSE(ARRAY_AGG(COALESCE(url, 'NULL-PLACEHOLDER') ORDER BY created_dt))[OFFSET(0)] AS url
           , ARRAY_REVERSE(ARRAY_AGG(COALESCE(object, 'NULL-PLACEHOLDER') ORDER BY created_dt))[OFFSET(0)] AS object
-          , ARRAY_REVERSE(ARRAY_AGG(COALESCE(fk_property_id, 'NULL-PLACEHOLDER') ORDER BY created_dt))[OFFSET(0)] AS fk_property_id
     FROM    {{ ref('versions__recipes') }}
     GROUP BY 
           recipe_id
@@ -39,7 +38,6 @@ WITH fields_cte AS (
                    LAG(last_edited_dt) OVER (PARTITION BY recipe_id ORDER BY effective_start_dt) != last_edited_dt
                 OR LAG(url) OVER (PARTITION BY recipe_id ORDER BY effective_start_dt) != url
                 OR LAG(object) OVER (PARTITION BY recipe_id ORDER BY effective_start_dt) != object
-                OR LAG(fk_property_id) OVER (PARTITION BY recipe_id ORDER BY effective_start_dt) != fk_property_id
           , 1
           , 0
           ) AS has_status_changed
@@ -65,11 +63,10 @@ WITH fields_cte AS (
 )
 
 SELECT DISTINCT 
-      {{ dbt_utils.surrogate_key(['recipe_id', 'first_effective_start_dt']) }} AS surrogate_key
+      {{ dbt_utils.surrogate_key(['recipe_id', 'first_effective_start_dt']) }} AS pk_surrogate_key
       , NULLIF(recipe_id, 'NULL-PLACEHOLDER') AS recipe_id
       , NULLIF(url, 'NULL-PLACEHOLDER') AS url
       , NULLIF(object, 'NULL-PLACEHOLDER') AS object
-      , NULLIF(fk_property_id, 'NULL-PLACEHOLDER') AS fk_property_id
       , NULLIF(last_edited_dt, '1970-01-01') AS last_edited_dt
       , first_effective_start_dt AS effective_start_dt 
       , last_effective_end_dt AS effective_end_dt
