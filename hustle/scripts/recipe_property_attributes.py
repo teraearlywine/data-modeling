@@ -62,8 +62,15 @@ mysql_db = pd.read_csv('files/recipe_property_attributes.csv', header=0)
 mysql_db['url'].fillna("NULL-PLACEHOLDER", inplace=True)
 mysql_db['multi_select'].fillna("NULL-PLACEHOLDER", inplace=True)
 mysql_db['title'].fillna("NULL-PLACEHOLDER", inplace=True)
+
 mysql_db['url'].replace(to_replace="{}", value="NULL-PLACEHOLDER", inplace=True)
 mysql_db['title'].replace(to_replace="{}", value="NULL-PLACEHOLDER", inplace=True)
+
+mysql_db['created_time'].fillna("NULL-PLACEHOLDER", inplace=True)
+# mysql_db['created_time'].replace(to_replace="{}", value="NULL-PLACEHOLDER", inplace=True)
+
+mysql_db['last_edited_time'].fillna("NULL-PLACEHOLDER", inplace=True)
+# mysql_db['last_edited_time'].replace(to_replace="{}", value="NULL-PLACEHOLDER", inplace=True)
 
 
 # Create cursor
@@ -71,14 +78,14 @@ mysql_cursor2 = ms_conn.cursor()
 
 # Create recipe attributes tbl
 mysql_cursor2.execute('CREATE DATABASE IF NOT EXISTS meals;')
-mysql_cursor2.execute('CREATE TABLE IF NOT EXISTS meals.recipe_attributes(id VARCHAR(40), name VARCHAR(255), type VARCHAR(255), multi_select LONGTEXT, url VARCHAR(255), title VARCHAR(255) );')
+mysql_cursor2.execute('CREATE TABLE IF NOT EXISTS meals.recipe_attributes(id VARCHAR(40), name VARCHAR(255), type VARCHAR(255), created_time VARCHAR(255), last_edited_time VARCHAR(255), multi_select LONGTEXT, url VARCHAR(255), title VARCHAR(255));')
 record = mysql_cursor2.fetchone()
 
 print("table created!")
 
 # Iterate over CSV, drop into new table
 for i,row in mysql_db.iterrows():
-    sql = "INSERT INTO meals.recipe_attributes VALUES (%s,%s,%s,%s,%s,%s)"
+    sql = "INSERT INTO meals.recipe_attributes VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
     mysql_cursor2.execute(sql, tuple(row))
     print("Record inserted")
 
