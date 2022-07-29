@@ -5,19 +5,18 @@
 }}
 
 WITH source_cte AS (
-    
-  SELECT  id AS fk_property_id
+
+  SELECT DISTINCT id AS property_id
         , name AS property_name
         , type
-        , JSON_EXTRACT_ARRAY(PARSE_JSON(REPLACE(NULLIF(multi_select, 'NULL-PLACEHOLDER'), "'", '"')), "$.options") AS attributes_array
+        , created_time
+        , last_edited_time
+        , multi_select
   FROM   `portfolio-351323.dev_tera.recipe_attributes`
 
 )
 
-SELECT  * EXCEPT(attributes_array, attributes)
-      , JSON_EXTRACT_SCALAR(attributes, '$.id') AS pk_attribute_id
-      , JSON_EXTRACT_SCALAR(attributes, '$.color') AS attribute_color
-      , JSON_EXTRACT_SCALAR(attributes, '$.name') AS attribute_name
-FROM    source_cte
+SELECT  * EXCEPT(multi_select)
+      , PARSE_JSON(REPLACE(NULLIF(multi_select, 'NULL-PLACEHOLDER'), "'", '"')) AS attributes_json
 
-        CROSS JOIN UNNEST(attributes_array) AS attributes
+FROM    source_cte

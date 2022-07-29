@@ -11,22 +11,23 @@
 
 WITH source_cte AS (
 
-  SELECT  id AS recipe_id
+  SELECT DISTINCT id AS recipe_id
         , DATE(created_time) AS created_dt
         , DATE(last_edited_time) AS last_edited_dt
         , url
         , object
-        , [ JSON_EXTRACT_SCALAR(properties, '$.Difficulty Level.id') 
-          , JSON_EXTRACT_SCALAR(properties, '$.Cuisine.id')
-          , JSON_EXTRACT_SCALAR(properties, '$.Link.id') 
-          , JSON_EXTRACT_SCALAR(properties, '$.Meal Type.id')
-          ] AS properties_array
+        , properties
   FROM   `portfolio-351323.dev_tera.recipes`
 
 )
 
-SELECT  * EXCEPT(properties_array, properties_fanout)
-      , properties_fanout AS fk_property_id
+SELECT  * EXCEPT(properties)
+        , [ JSON_EXTRACT_SCALAR(properties, '$.Difficulty Level.id') 
+          , JSON_EXTRACT_SCALAR(properties, '$.Cuisine.id')
+          , JSON_EXTRACT_SCALAR(properties, '$.Link.id') 
+          , JSON_EXTRACT_SCALAR(properties, '$.Meal Type.id')
+          , JSON_EXTRACT_SCALAR(properties, '$.Name.id')
+          , JSON_EXTRACT_SCALAR(properties, '$.Created Time.id')
+          , JSON_EXTRACT_SCALAR(properties, '$.Last Edited Time.id')
+          ] AS properties_array
 FROM    source_cte
-
-        CROSS JOIN UNNEST(properties_array) AS properties_fanout
