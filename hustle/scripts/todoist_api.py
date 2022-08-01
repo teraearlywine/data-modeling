@@ -18,9 +18,9 @@ headers = {
 projects = requests.get(url, headers=headers)
 data = projects.json()
 
-
-
 json_export_file = "files/todoist_api.json"
 
 with open(json_export_file, 'w', encoding='utf8') as f:
     json.dump(data, f, ensure_ascii=False)
+
+f.close()
