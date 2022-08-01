@@ -6,7 +6,7 @@ name: 'hustle'
 config-version: 2
 
 version: '1.2.0'
-require-dbt-version: '>= 1.2.0'
+
 
 # This setting configures which "profile" dbt uses for this project.
 profile: 'default'
