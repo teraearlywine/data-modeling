@@ -17,3 +17,7 @@ Try running the following commands:
 
 #  brew install dbt-labs/dbt/dbt-bigquery@1.2.0
 #  You need to reference the dbt-labs filepath
+
+# Note to future self: 
+To upgrade dbt use PIP because on your local device, you have a python venv for dbt. 
+pip install --upgrade dbt-bigquery WORKS! 
