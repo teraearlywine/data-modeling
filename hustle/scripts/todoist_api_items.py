@@ -5,7 +5,8 @@ import pandas as pd
 import requests
 
 
-url = "https://api.todoist.com/rest/v1/projects"
+
+url = "https://api.todoist.com/rest/v1/tasks"
 token = "6bdefb8d6b63fcbc3e74bcd0a155730386e5da87"
 
 headers = {
@@ -16,7 +17,7 @@ headers = {
 projects = requests.get(url, headers=headers)
 data = projects.json()
 
-json_export_file = "files/todoist_projects.json"
+json_export_file = "files/todoist_project_items.json"
 
 with open(json_export_file, 'w', encoding='utf8') as f:
     json.dump(data, f, ensure_ascii=False)
